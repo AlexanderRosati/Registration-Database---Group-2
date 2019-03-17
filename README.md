@@ -9,7 +9,7 @@ Also, each member needs to submit a GroupEval.docxPreview the document
 
 Requirements:
 - Group Evaluation
-- CRUD Operations for each entity (Course, SEction ,Faculty, Student, Major, Enrollment
+- CRUD Operations for each entity (Course, Section ,Faculty, Student, Major, Enrollment)
 - Section filtering by semester
 - Enrollment filtering by student
 - Student filtering by major
