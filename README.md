@@ -1,5 +1,5 @@
 # Registration Database
-Group-2: Isaac Hampshire, John Leone, Christine Li, Alexander Rosati
+Group-2: Isaac Hampshire, John Leone, Christine Li, Alexander Rosati  
 Due: March 28, 6PM
 
 Use Entity Framework to interact with the registration database and build a UI to allow standard registration functions.
