@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Main_Form
+namespace Major_CRUD_Operations_Form
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace Main_Form
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainForm());
+            Application.Run(new majorCRUDForm());
         }
     }
 }
