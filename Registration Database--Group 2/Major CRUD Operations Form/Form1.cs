@@ -134,17 +134,20 @@ namespace Major_CRUD_Operations_Form
 
             else
             {
-                IQueryable <Major> queryResult = RegistrationEntities.Majors.Where(m => m.Name == updateMajorTextBox.Text);
+                IQueryable <Major> queryResult = RegistrationEntities.Majors.Where(m => m.Name == updateMajorTextBox.Text.ToLower());
+                string listBoxEntry = (string)majorsListBox.SelectedItem;
 
-                if (queryResult.Count() == 0)
+                //See if the entered major is the same as the major of the selected record
+                bool majorIsSame = listBoxEntry.Contains(updateMajorTextBox.Text.ToLower());
+
+                if (queryResult.Count() == 0 ||  majorIsSame)
                 { 
-                    string listBoxEntry = (string)majorsListBox.SelectedItem;
                     string IDOfRecordToUpdateString = listBoxEntry.Split(' ')[0];
                     int IDOfRecordToUpdateInt = Convert.ToInt32(IDOfRecordToUpdateString);
 
                     Major majorToUpdate = RegistrationEntities.Majors.Find(IDOfRecordToUpdateInt);
-                    majorToUpdate.Name = updateMajorTextBox.Text;
-                    majorToUpdate.College = updateCollegeTextBox.Text;
+                    majorToUpdate.Name = updateMajorTextBox.Text.ToLower();
+                    majorToUpdate.College = updateCollegeTextBox.Text.ToLower();
                     RegistrationEntities.SaveChanges();
 
                     majorsListBox.Items.Clear();

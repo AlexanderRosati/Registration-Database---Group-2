@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.majorNameLabel = new System.Windows.Forms.Label();
-            this.majorNameTextBot = new System.Windows.Forms.TextBox();
             this.collegeLabel = new System.Windows.Forms.Label();
-            this.collegeTextBox = new System.Windows.Forms.TextBox();
             this.addMajorButton = new System.Windows.Forms.Button();
             this.majorsListBox = new System.Windows.Forms.ListBox();
             this.updateButton = new System.Windows.Forms.Button();
@@ -42,9 +40,11 @@
             this.listBoxMajorLabel = new System.Windows.Forms.Label();
             this.updateCollegeLabel = new System.Windows.Forms.Label();
             this.updateMajorNameLabel = new System.Windows.Forms.Label();
-            this.updateCollegeTextBox = new System.Windows.Forms.TextBox();
-            this.updateMajorTextBox = new System.Windows.Forms.TextBox();
             this.deselectButton = new System.Windows.Forms.Button();
+            this.majorNameTextBot = new System.Windows.Forms.MaskedTextBox();
+            this.collegeTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.updateMajorTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.updateCollegeTextBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // majorNameLabel
@@ -56,13 +56,6 @@
             this.majorNameLabel.TabIndex = 0;
             this.majorNameLabel.Text = "Major Name:";
             // 
-            // majorNameTextBot
-            // 
-            this.majorNameTextBot.Location = new System.Drawing.Point(85, 47);
-            this.majorNameTextBot.Name = "majorNameTextBot";
-            this.majorNameTextBot.Size = new System.Drawing.Size(278, 20);
-            this.majorNameTextBot.TabIndex = 1;
-            // 
             // collegeLabel
             // 
             this.collegeLabel.AutoSize = true;
@@ -71,13 +64,6 @@
             this.collegeLabel.Size = new System.Drawing.Size(45, 13);
             this.collegeLabel.TabIndex = 2;
             this.collegeLabel.Text = "College:";
-            // 
-            // collegeTextBox
-            // 
-            this.collegeTextBox.Location = new System.Drawing.Point(85, 83);
-            this.collegeTextBox.Name = "collegeTextBox";
-            this.collegeTextBox.Size = new System.Drawing.Size(278, 20);
-            this.collegeTextBox.TabIndex = 3;
             // 
             // addMajorButton
             // 
@@ -175,20 +161,6 @@
             this.updateMajorNameLabel.TabIndex = 12;
             this.updateMajorNameLabel.Text = "Major Name:";
             // 
-            // updateCollegeTextBox
-            // 
-            this.updateCollegeTextBox.Location = new System.Drawing.Point(525, 84);
-            this.updateCollegeTextBox.Name = "updateCollegeTextBox";
-            this.updateCollegeTextBox.Size = new System.Drawing.Size(278, 20);
-            this.updateCollegeTextBox.TabIndex = 16;
-            // 
-            // updateMajorTextBox
-            // 
-            this.updateMajorTextBox.Location = new System.Drawing.Point(525, 48);
-            this.updateMajorTextBox.Name = "updateMajorTextBox";
-            this.updateMajorTextBox.Size = new System.Drawing.Size(278, 20);
-            this.updateMajorTextBox.TabIndex = 15;
-            // 
             // deselectButton
             // 
             this.deselectButton.Location = new System.Drawing.Point(778, 397);
@@ -199,14 +171,48 @@
             this.deselectButton.UseVisualStyleBackColor = true;
             this.deselectButton.Click += new System.EventHandler(this.deselectButton_Click);
             // 
+            // majorNameTextBot
+            // 
+            this.majorNameTextBot.Location = new System.Drawing.Point(85, 45);
+            this.majorNameTextBot.Mask = "??????????????????????????????????????????????????";
+            this.majorNameTextBot.Name = "majorNameTextBot";
+            this.majorNameTextBot.Size = new System.Drawing.Size(275, 20);
+            this.majorNameTextBot.TabIndex = 18;
+            // 
+            // collegeTextBox
+            // 
+            this.collegeTextBox.Location = new System.Drawing.Point(85, 83);
+            this.collegeTextBox.Mask = "??????????????????????????????????????????????????";
+            this.collegeTextBox.Name = "collegeTextBox";
+            this.collegeTextBox.Size = new System.Drawing.Size(275, 20);
+            this.collegeTextBox.TabIndex = 19;
+            // 
+            // updateMajorTextBox
+            // 
+            this.updateMajorTextBox.Location = new System.Drawing.Point(525, 48);
+            this.updateMajorTextBox.Mask = "??????????????????????????????????????????????????";
+            this.updateMajorTextBox.Name = "updateMajorTextBox";
+            this.updateMajorTextBox.Size = new System.Drawing.Size(275, 20);
+            this.updateMajorTextBox.TabIndex = 20;
+            // 
+            // updateCollegeTextBox
+            // 
+            this.updateCollegeTextBox.Location = new System.Drawing.Point(525, 84);
+            this.updateCollegeTextBox.Mask = "??????????????????????????????????????????????????";
+            this.updateCollegeTextBox.Name = "updateCollegeTextBox";
+            this.updateCollegeTextBox.Size = new System.Drawing.Size(275, 20);
+            this.updateCollegeTextBox.TabIndex = 21;
+            // 
             // majorCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 461);
-            this.Controls.Add(this.deselectButton);
             this.Controls.Add(this.updateCollegeTextBox);
             this.Controls.Add(this.updateMajorTextBox);
+            this.Controls.Add(this.collegeTextBox);
+            this.Controls.Add(this.majorNameTextBot);
+            this.Controls.Add(this.deselectButton);
             this.Controls.Add(this.updateCollegeLabel);
             this.Controls.Add(this.updateMajorNameLabel);
             this.Controls.Add(this.listBoxMajorLabel);
@@ -217,9 +223,7 @@
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.majorsListBox);
             this.Controls.Add(this.addMajorButton);
-            this.Controls.Add(this.collegeTextBox);
             this.Controls.Add(this.collegeLabel);
-            this.Controls.Add(this.majorNameTextBot);
             this.Controls.Add(this.majorNameLabel);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(950, 500);
@@ -234,9 +238,7 @@
         #endregion
 
         private System.Windows.Forms.Label majorNameLabel;
-        private System.Windows.Forms.TextBox majorNameTextBot;
         private System.Windows.Forms.Label collegeLabel;
-        private System.Windows.Forms.TextBox collegeTextBox;
         private System.Windows.Forms.Button addMajorButton;
         private System.Windows.Forms.ListBox majorsListBox;
         private System.Windows.Forms.Button updateButton;
@@ -247,9 +249,11 @@
         private System.Windows.Forms.Label listBoxMajorLabel;
         private System.Windows.Forms.Label updateCollegeLabel;
         private System.Windows.Forms.Label updateMajorNameLabel;
-        private System.Windows.Forms.TextBox updateCollegeTextBox;
-        private System.Windows.Forms.TextBox updateMajorTextBox;
         private System.Windows.Forms.Button deselectButton;
+        private System.Windows.Forms.MaskedTextBox majorNameTextBot;
+        private System.Windows.Forms.MaskedTextBox collegeTextBox;
+        private System.Windows.Forms.MaskedTextBox updateMajorTextBox;
+        private System.Windows.Forms.MaskedTextBox updateCollegeTextBox;
     }
 }
 
