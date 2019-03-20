@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Major_CRUD_Operations_Form;
-using DatabaseClasses;
 
 namespace Main_Form
 {
@@ -30,8 +29,7 @@ namespace Main_Form
             if (formIsOpen == false)
             { 
                 formIsOpen = true;
-                majorCRUDForm majorCRUDForm = new majorCRUDForm();
-                majorCRUDForm.RegistrationEntities = RegistrationEntities;
+                majorCRUDForm majorCRUDForm = new majorCRUDForm(RegistrationEntities);
                 majorCRUDForm.Show();
                 formIsOpen = false;
             }
