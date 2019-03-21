@@ -61,6 +61,7 @@
             this.enrollmentCRUDButton.TabIndex = 1;
             this.enrollmentCRUDButton.Text = "CRUD Operations for Enrollment Table";
             this.enrollmentCRUDButton.UseVisualStyleBackColor = true;
+            this.enrollmentCRUDButton.Click += new System.EventHandler(this.enrollmentCRUDButton_Click);
             // 
             // sectionFilteringBySemesterButton
             // 
@@ -156,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 261);
+            this.ClientSize = new System.Drawing.Size(654, 262);
             this.Controls.Add(this.facultyCRUDButton);
             this.Controls.Add(this.courseFilteringByDepartment);
             this.Controls.Add(this.studentFilteringByMajorButton);

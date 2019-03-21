@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Student_CRUD_Operations_Form;
+using Major_CRUD_Operations_Form;
+using Enrollment_CRUD_Form;
 using RegistrationEntityModel;
 
 namespace Main_Form
@@ -25,7 +27,7 @@ namespace Main_Form
         {
             if (CanOpenNewForm())
             {
-                Major_CRUD_Operations_Form.majorCRUDForm majorCRUDForm = new Major_CRUD_Operations_Form.majorCRUDForm(RegistrationEntities);
+                majorCRUDForm majorCRUDForm = new Major_CRUD_Operations_Form.majorCRUDForm(RegistrationEntities);
                 majorCRUDForm.Show();
             }
 
@@ -44,8 +46,22 @@ namespace Main_Form
         {
             if (CanOpenNewForm())
             {
-                Student_CRUD_Operations_Form.studentCRUDForm studentCRUDForm = new Student_CRUD_Operations_Form.studentCRUDForm(RegistrationEntities);
+                studentCRUDForm studentCRUDForm = new Student_CRUD_Operations_Form.studentCRUDForm(RegistrationEntities);
                 studentCRUDForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+
+        private void enrollmentCRUDButton_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                enrollmentCRUDForm enrollmentCRUDForm = new enrollmentCRUDForm(RegistrationEntities);
+                enrollmentCRUDForm.Show();
             }
 
             else

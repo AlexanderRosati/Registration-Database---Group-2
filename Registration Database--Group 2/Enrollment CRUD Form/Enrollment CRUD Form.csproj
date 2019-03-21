@@ -4,12 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}</ProjectGuid>
+    <ProjectGuid>{60E17E57-6658-4060-B941-D788905DC6F1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Main_Form</RootNamespace>
-    <AssemblyName>Main Form</AssemblyName>
+    <RootNamespace>Enrollment_CRUD_Form</RootNamespace>
+    <AssemblyName>Enrollment CRUD Form</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,26 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="RegistrationEntityModel">
       <HintPath>..\RegistrationEntityModel\bin\Debug\RegistrationEntityModel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -74,9 +69,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,21 +82,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Enrollment CRUD Form\Enrollment CRUD Form.csproj">
-      <Project>{60e17e57-6658-4060-b941-d788905dc6f1}</Project>
-      <Name>Enrollment CRUD Form</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Major CRUD Operations Form\Major CRUD Operations Form.csproj">
-      <Project>{027ea279-09ed-493e-94e8-d0c1f2054540}</Project>
-      <Name>Major CRUD Operations Form</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Student CRUD Operations Form\Student CRUD Operations Form.csproj">
-      <Project>{61e46dfd-5ebe-4fac-876b-ca474d348ab0}</Project>
-      <Name>Student CRUD Operations Form</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
