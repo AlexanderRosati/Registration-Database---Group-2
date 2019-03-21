@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Major_CRUD_Operations_Form
+namespace RegistrationEntityModel
 {
     using System;
     using System.Data.Entity;

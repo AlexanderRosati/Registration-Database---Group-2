@@ -6,32 +6,51 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Major_CRUD_Operations_Form;
+using Student_CRUD_Operations_Form;
+using RegistrationEntityModel;
 
 namespace Main_Form
 {
     public partial class mainForm : Form
     {
-        //Do not allow more than one form to be opened at a time
-        private bool formIsOpen;
-
         private RegistrationEntities RegistrationEntities;
 
         public mainForm()
         {
             InitializeComponent();
-            formIsOpen = false;
             RegistrationEntities = new RegistrationEntities();
         }
 
         private void majorCRUDButton_Click(object sender, EventArgs e)
         {
-            if (formIsOpen == false)
-            { 
-                formIsOpen = true;
-                majorCRUDForm majorCRUDForm = new majorCRUDForm(RegistrationEntities);
+            if (CanOpenNewForm())
+            {
+                Major_CRUD_Operations_Form.majorCRUDForm majorCRUDForm = new Major_CRUD_Operations_Form.majorCRUDForm(RegistrationEntities);
                 majorCRUDForm.Show();
-                formIsOpen = false;
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+
+        private bool CanOpenNewForm()
+        {
+            return Application.OpenForms.Count < 2;
+        }
+
+        private void studentCRUDButton_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                Student_CRUD_Operations_Form.studentCRUDForm studentCRUDForm = new Student_CRUD_Operations_Form.studentCRUDForm(RegistrationEntities);
+                studentCRUDForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
             }
         }
     }

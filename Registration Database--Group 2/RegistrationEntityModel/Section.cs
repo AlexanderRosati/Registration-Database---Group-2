@@ -7,24 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Main_Form
+namespace RegistrationEntityModel
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Major
+    public partial class Section
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Major()
+        public Section()
         {
-            this.Students = new HashSet<Student>();
+            this.Enrollments = new HashSet<Enrollment>();
         }
     
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string College { get; set; }
+        public int CourseID { get; set; }
+        public int FacultyID { get; set; }
+        public string Day { get; set; }
+        public string Time { get; set; }
+        public string Semester { get; set; }
     
+        public virtual Course Course { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public virtual Faculty Faculty { get; set; }
     }
 }

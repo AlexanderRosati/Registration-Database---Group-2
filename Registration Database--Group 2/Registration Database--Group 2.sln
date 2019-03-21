@@ -9,6 +9,10 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Registration", "Registratio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Major CRUD Operations Form", "Major CRUD Operations Form\Major CRUD Operations Form.csproj", "{027EA279-09ED-493E-94E8-D0C1F2054540}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student CRUD Operations Form", "Student CRUD Operations Form\Student CRUD Operations Form.csproj", "{61E46DFD-5EBE-4FAC-876B-CA474D348AB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationEntityModel", "RegistrationEntityModel\RegistrationEntityModel.csproj", "{3FE48654-A8FF-4820-95F2-764D669C6B7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{027EA279-09ED-493E-94E8-D0C1F2054540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027EA279-09ED-493E-94E8-D0C1F2054540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027EA279-09ED-493E-94E8-D0C1F2054540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E46DFD-5EBE-4FAC-876B-CA474D348AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E46DFD-5EBE-4FAC-876B-CA474D348AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E46DFD-5EBE-4FAC-876B-CA474D348AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E46DFD-5EBE-4FAC-876B-CA474D348AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FE48654-A8FF-4820-95F2-764D669C6B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE48654-A8FF-4820-95F2-764D669C6B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE48654-A8FF-4820-95F2-764D669C6B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE48654-A8FF-4820-95F2-764D669C6B7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -81,8 +81,9 @@
             this.studentCRUDButton.Name = "studentCRUDButton";
             this.studentCRUDButton.Size = new System.Drawing.Size(100, 100);
             this.studentCRUDButton.TabIndex = 3;
-            this.studentCRUDButton.Text = "CRUD Operations for Faculty Table";
+            this.studentCRUDButton.Text = "CRUD Operations for Student Table";
             this.studentCRUDButton.UseVisualStyleBackColor = true;
+            this.studentCRUDButton.Click += new System.EventHandler(this.studentCRUDButton_Click);
             // 
             // enrollmentFilteringByStudent
             // 

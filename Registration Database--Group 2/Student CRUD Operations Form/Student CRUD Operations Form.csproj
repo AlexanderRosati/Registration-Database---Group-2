@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}</ProjectGuid>
+    <ProjectGuid>{61E46DFD-5EBE-4FAC-876B-CA474D348AB0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Main_Form</RootNamespace>
-    <AssemblyName>Main Form</AssemblyName>
+    <RootNamespace>Student_CRUD_Operations_Form</RootNamespace>
+    <AssemblyName>Student CRUD Operations Form</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="RegistrationEntityModel">
       <HintPath>..\RegistrationEntityModel\bin\Debug\RegistrationEntityModel.dll</HintPath>
@@ -75,7 +75,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -86,16 +86,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Major CRUD Operations Form\Major CRUD Operations Form.csproj">
-      <Project>{027ea279-09ed-493e-94e8-d0c1f2054540}</Project>
-      <Name>Major CRUD Operations Form</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Student CRUD Operations Form\Student CRUD Operations Form.csproj">
-      <Project>{61e46dfd-5ebe-4fac-876b-ca474d348ab0}</Project>
-      <Name>Student CRUD Operations Form</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

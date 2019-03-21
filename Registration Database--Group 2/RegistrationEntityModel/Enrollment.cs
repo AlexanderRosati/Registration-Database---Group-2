@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Main_Form
+namespace RegistrationEntityModel
 {
     using System;
     using System.Collections.Generic;

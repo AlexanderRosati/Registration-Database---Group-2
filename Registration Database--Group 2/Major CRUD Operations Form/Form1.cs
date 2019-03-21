@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RegistrationEntityModel;
 
 
 namespace Major_CRUD_Operations_Form
@@ -98,23 +99,34 @@ namespace Major_CRUD_Operations_Form
         {
             errorLabel.Text = String.Empty;
 
-            if (majorsListBox.SelectedItem != null)
-            {
-                string listBoxEntry = (string)majorsListBox.SelectedItem;
-                string IDOfRecordToRemoveString = listBoxEntry.Split(' ')[0];
-                int IDOfRecordToRemoveInt = Convert.ToInt32(IDOfRecordToRemoveString);
+            string listBoxEntry = (string)majorsListBox.SelectedItem;
+            string IDOfRecordToRemoveString = listBoxEntry.Split(' ')[0];
+            int IDOfRecordToRemoveInt = Convert.ToInt32(IDOfRecordToRemoveString);
 
-                Major majorToRemove = RegistrationEntities.Majors.Find(IDOfRecordToRemoveInt);
-                RegistrationEntities.Majors.Remove(majorToRemove);
-                RegistrationEntities.SaveChanges();
+            Major majorToRemove = RegistrationEntities.Majors.Find(IDOfRecordToRemoveInt);
 
-                majorsListBox.Items.Clear();
-                updateMajorsListBox();
+            IQueryable<Student> queryResult = RegistrationEntities.Students.Where(s => s.Major.Id == majorToRemove.Id);
+            
+
+            if (queryResult.Count() == 0)
+            { 
+                if (majorsListBox.SelectedItem != null)
+                { 
+                    RegistrationEntities.Majors.Remove(majorToRemove);
+                    RegistrationEntities.SaveChanges();
+                    majorsListBox.Items.Clear();
+                    updateMajorsListBox();
+                }
+
+                else
+                {
+                    errorLabel.Text = "Error: You need to select the major to remove by clicking it below.";
+                }
             }
 
             else
             {
-                errorLabel.Text = "Error: You need to select the major to remove by clicking it below.";
+                errorLabel.Text = "You cannot delete this record because other records reference it.";
             }
         }
 
