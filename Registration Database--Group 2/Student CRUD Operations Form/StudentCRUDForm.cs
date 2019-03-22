@@ -90,33 +90,31 @@ namespace Student_CRUD_Operations_Form
         {
             errorLabel.Text = String.Empty;
 
-            string listBoxEntry = (string)studentsListBox.SelectedItem;
-            string IDOfRecordToRemoveString = listBoxEntry.Split(' ')[0];
-            int IDOfRecordToRemoveInt = Convert.ToInt32(IDOfRecordToRemoveString);
-
-            Student studentToRemove = RegistrationEntities.Students.Find(IDOfRecordToRemoveInt);
-
-            IQueryable<Enrollment> queryResult = RegistrationEntities.Enrollments.Where(en => en.Student.Id == studentToRemove.Id);
-
-            if (queryResult.Count() == 0)
+            if (studentsListBox.SelectedItem != null)
             {
-                if (studentsListBox.SelectedItem != null)
+                string listBoxEntry = (string)studentsListBox.SelectedItem;
+                string IDOfRecordToRemoveString = listBoxEntry.Split(' ')[0];
+                int IDOfRecordToRemoveInt = Convert.ToInt32(IDOfRecordToRemoveString);
+
+                Student studentToRemove = RegistrationEntities.Students.Find(IDOfRecordToRemoveInt);
+
+                if (studentToRemove.Enrollments.Count > 0)
+                {
+                    errorLabel.Text = "Error: You cannot delete this record because other records reference it.";
+                }
+
+                else
                 {
                     RegistrationEntities.Students.Remove(studentToRemove);
                     RegistrationEntities.SaveChanges();
                     studentsListBox.Items.Clear();
                     UpdateListBox();
                 }
-
-                else
-                {
-                    errorLabel.Text = "Error: You have not selected a student to delete. Click a student below.";
-                }
             }
 
             else
             {
-                errorLabel.Text = "You cannot delete this record because other records reference it.";
+                errorLabel.Text = "Error: You have not selected a student to delete. Click a student below.";
             }
         }
 
@@ -124,9 +122,23 @@ namespace Student_CRUD_Operations_Form
         {
             errorLabel.Text = String.Empty;
             
-
-            if (studentsListBox.SelectedItem != null)
+            if (studentNameTextBox.Text == String.Empty)
             {
+                errorLabel.Text = "Error: You did not enter the student's name.";
+            }
+
+            else if (majorComboBox.SelectedItem == null)
+            {
+                errorLabel.Text = "Error: You did not select a major.";
+            }
+
+            else if (studentsListBox.SelectedItem == null)
+            {
+                errorLabel.Text = "Error: You must select a student to modify.";
+            }
+
+            else
+            { 
                 string selectedItemComboBox = (string)majorComboBox.SelectedItem;
                 string listBoxEntry = (string)studentsListBox.SelectedItem;
                 string IDOfRecordToBeUpdatedString = listBoxEntry.Split(' ')[0];
@@ -135,10 +147,10 @@ namespace Student_CRUD_Operations_Form
                 Student studentRecordToUpdate = RegistrationEntities.Students.Find(IDOfRecordToBeUpdatedInt);
 
                 IEnumerable<Major> queryResult = from m in RegistrationEntities.Majors
-                                             where m.Name == selectedItemComboBox
-                                             select m;
+                                                 where m.Name == selectedItemComboBox
+                                                 select m;
 
-                studentRecordToUpdate.Name = studentNameTextBox.Text;
+                studentRecordToUpdate.Name = studentNameTextBox.Text.ToLower();
                 studentRecordToUpdate.Major = queryResult.ElementAt(0);
 
                 RegistrationEntities.SaveChanges();
@@ -148,11 +160,6 @@ namespace Student_CRUD_Operations_Form
 
                 studentNameTextBox.Text = String.Empty;
                 majorComboBox.SelectedItem = null;
-            }
-
-            else
-            {
-                errorLabel.Text = "Error: You must select a student to modify.";
             }
         }
     }
