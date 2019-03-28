@@ -77,7 +77,7 @@ namespace Course_CRUD_Operations_Form
 
 				Course temp = RegEnt.Courses.Find(itemID);
 
-				/* TODO: Check if has students enrolled or associated with a professor */
+				/* TODO: Check if has students enrolled */
 
 				RegEnt.Courses.Remove(temp);
 				RegEnt.SaveChanges();
@@ -92,7 +92,22 @@ namespace Course_CRUD_Operations_Form
 
 		private void updateCourseButton_Click(object sender, EventArgs e)
 		{
-			/* To-Do */
+			courseErrorLabel.Text = "";
+
+			if (String.IsNullOrWhiteSpace(courseUpdateNameTextBox.Text) || String.IsNullOrWhiteSpace(courseUpdateNumberTextBox.Text) ||
+				String.IsNullOrWhiteSpace(courseUpdateCreditsTextBox.Text) || String.IsNullOrWhiteSpace(courseUpdateDepartmentTextBox.Text))
+			{
+				courseErrorLabel.Text = "Error: Did not put any name, number, credits, or department information to update.";
+			}
+			else if (courseListBox.SelectedItem != null)
+			{
+				courseErrorLabel.Text = "Error: No course selected to update";
+			}
+			else
+			{
+				// TODO: Check if database contains item id from list, change record
+			}
+			
 		}
 
 
