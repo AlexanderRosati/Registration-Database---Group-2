@@ -13,12 +13,85 @@ namespace Course_CRUD_Operations_Form
 {
 	public partial class CourseCRUDForm : Form
 	{
-		RegistrationEntities RegEnt;
+		/* Initializeation functions */
+		private RegistrationEntities RegEnt;
 		public CourseCRUDForm()
 		{
 			InitializeComponent();
-
 			RegEnt = new RegistrationEntities();
+		}
+
+		public CourseCRUDForm(RegistrationEntities RE)
+		{
+			InitializeComponent();
+
+			RegEnt = RE;
+			updateCourseListBox();
+			courseErrorLabel = "";
+		}
+
+		/* CRUD operation functions */
+		private void addCourseButton_Click(object sender, EventArgs e)
+		{
+			if (String.IsNullOrWhiteSpace(courseNameTextBox.Text) || String.IsNullOrWhiteSpace(courseNumTextBox.Text) ||
+				String.IsNullOrWhiteSpace(courseCreditsTextBox.Text) || String.IsNullOrWhiteSpace(courseDepartmentTextBox.Text))
+			{
+				courseErrorLabel.Text = "Error: Missing course name, number, credits, or department information.";
+
+			} else
+			{
+				Course newCourse = new Course()
+				{
+					Name = courseNameTextBox.Text,
+					Number = courseNumTextBox.Text,
+					Credits = Convert.ToInt16(courseCreditsTextBox.Text),
+					Department = courseDepartmentTextBox.Text
+				};
+
+				IQueryable<Course> q = RegEnt.Courses.Where(record => record.Number == newCourse.Number);
+				if(q.Count() == 0) //doesn't exist, add new course
+				{
+					RegEnt.Courses.Add(newCourse);
+					RegEnt.SaveChanges();
+					string listBoxEntry = $"{newCourse.Id.ToString()}	{newCourse.Name}	{newCourse.Number}	{newCourse.Credits.ToString()}	{newCourse.Department}";
+					courseListBox.Items.Add(listBoxEntry);
+
+					clearTextBoxes();
+				} else
+				{
+					courseErrorLabel.Text = $"Error: Course {newCourse.Number} already exists";
+				}
+			}
+						
+		}
+
+		
+
+
+		/* Miscellaneous QOL Fuctions */
+		private void updateCourseListBox()
+		{
+			string listBoxEntry = null;
+
+			//Display all major records in database
+			foreach (Course course in RegEnt.Courses)
+			{
+				listBoxEntry = $"{course.Id.ToString()}	{course.Name}	{course.Number}	{course.Credits.ToString()}	{course.Department}";
+				courseListBox.Items.Add(listBoxEntry);
+			}
+		}
+
+		private void clearTextBoxes()
+		{
+			courseNameTextBox.Text = "";
+			courseNumTextBox.Text = "";
+			courseCreditsTextBox.Text = "";
+			courseDepartmentTextBox.Text = "";
+		}
+
+		private void courseClearButton_Click(object sender, EventArgs e)
+		{
+			clearTextBoxes();
 		}
 	}
 }
