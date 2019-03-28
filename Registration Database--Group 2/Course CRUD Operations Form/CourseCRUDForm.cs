@@ -90,6 +90,11 @@ namespace Course_CRUD_Operations_Form
 			}
 		}
 
+		private void updateCourseButton_Click(object sender, EventArgs e)
+		{
+			/* To-Do */
+		}
+
 
 		/* Miscellaneous QOL Fuctions */
 		private void updateCourseListBox()
@@ -111,12 +116,23 @@ namespace Course_CRUD_Operations_Form
 			courseCreditsTextBox.Text = "";
 			courseDepartmentTextBox.Text = "";
 		}
+		private void clearUpdateTextBoxes()
+		{
+			courseUpdateNameTextBox.Text = "";
+			courseUpdateNumberTextBox.Text = "";
+			courseUpdateCreditsTextBox.Text = "";
+			courseUpdateDepartmentTextBox.Text = "";
+		}
 
 		private void courseClearButton_Click(object sender, EventArgs e)
 		{
 			clearTextBoxes();
 		}
 
+		private void updateCourseClearButton_Click(object sender, EventArgs e)
+		{
+			clearUpdateTextBoxes();
+		}
 
 	}
 }
