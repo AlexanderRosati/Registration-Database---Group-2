@@ -87,5 +87,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RegistrationEntityModel\RegistrationEntityModel.csproj">
+      <Project>{3fe48654-a8ff-4820-95f2-764d669c6b7b}</Project>
+      <Name>RegistrationEntityModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
