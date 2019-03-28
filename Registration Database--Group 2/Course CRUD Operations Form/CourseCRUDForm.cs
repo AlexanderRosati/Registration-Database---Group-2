@@ -33,6 +33,7 @@ namespace Course_CRUD_Operations_Form
 		/* CRUD operation functions */
 		private void addCourseButton_Click(object sender, EventArgs e)
 		{
+			courseErrorLabel.Text = "";
 			if (String.IsNullOrWhiteSpace(courseNameTextBox.Text) || String.IsNullOrWhiteSpace(courseNumTextBox.Text) ||
 				String.IsNullOrWhiteSpace(courseCreditsTextBox.Text) || String.IsNullOrWhiteSpace(courseDepartmentTextBox.Text))
 			{
@@ -65,7 +66,29 @@ namespace Course_CRUD_Operations_Form
 						
 		}
 
-		
+		private void deleteCourseButton_Click(object sender, EventArgs e)
+		{
+			courseErrorLabel.Text = "";
+			if(courseListBox.SelectedItem != null)
+			{
+				string listBoxEntry = courseListBox.SelectedItem.ToString();
+				//string listBoxEntryID = cellstr(get(handles.courseListBox, 'String'));
+				int itemID = Convert.ToInt32(listBoxEntry.Split(' ')[0]);
+
+				Course temp = RegEnt.Courses.Find(itemID);
+
+				/* TODO: Check if has students enrolled or associated with a professor */
+
+				RegEnt.Courses.Remove(temp);
+				RegEnt.SaveChanges();
+				courseListBox.Items.Clear(); //Thought loop may be faster/more efficient but it's most complex to code
+				updateCourseListBox();
+								
+			} else
+			{
+				courseErrorLabel.Text = "Please select a course to delete from the list";
+			}
+		}
 
 
 		/* Miscellaneous QOL Fuctions */
@@ -93,5 +116,7 @@ namespace Course_CRUD_Operations_Form
 		{
 			clearTextBoxes();
 		}
+
+
 	}
 }

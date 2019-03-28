@@ -40,6 +40,7 @@
 			this.addCourseButton = new System.Windows.Forms.Button();
 			this.courseErrorLabel = new System.Windows.Forms.Label();
 			this.courseClearButton = new System.Windows.Forms.Button();
+			this.deleteCourseButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// courseNameTextBox
@@ -144,11 +145,22 @@
 			this.courseClearButton.UseVisualStyleBackColor = true;
 			this.courseClearButton.Click += new System.EventHandler(this.courseClearButton_Click);
 			// 
+			// deleteCourseButton
+			// 
+			this.deleteCourseButton.Location = new System.Drawing.Point(578, 379);
+			this.deleteCourseButton.Name = "deleteCourseButton";
+			this.deleteCourseButton.Size = new System.Drawing.Size(80, 31);
+			this.deleteCourseButton.TabIndex = 14;
+			this.deleteCourseButton.Text = "Delete";
+			this.deleteCourseButton.UseVisualStyleBackColor = true;
+			this.deleteCourseButton.Click += new System.EventHandler(this.deleteCourseButton_Click);
+			// 
 			// CourseCRUDForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.deleteCourseButton);
 			this.Controls.Add(this.courseClearButton);
 			this.Controls.Add(this.courseErrorLabel);
 			this.Controls.Add(this.addCourseButton);
@@ -181,6 +193,7 @@
 		private System.Windows.Forms.Button addCourseButton;
 		private System.Windows.Forms.Label courseErrorLabel;
 		private System.Windows.Forms.Button courseClearButton;
+		private System.Windows.Forms.Button deleteCourseButton;
 	}
 }
 
