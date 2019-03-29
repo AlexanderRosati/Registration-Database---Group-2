@@ -13,10 +13,10 @@ namespace RegistrationEntityModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RegistrationEntities1 : DbContext
+    public partial class RegistrationEntities : DbContext
     {
-        public RegistrationEntities1()
-            : base("name=RegistrationEntities1")
+        public RegistrationEntities()
+            : base("name=RegistrationEntities")
         {
         }
     

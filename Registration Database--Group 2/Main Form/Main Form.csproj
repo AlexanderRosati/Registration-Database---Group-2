@@ -92,10 +92,6 @@
       <Project>{60e17e57-6658-4060-b941-d788905dc6f1}</Project>
       <Name>Enrollment CRUD Form</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Faculty CRUD Form\Faculty CRUD Form.csproj">
-      <Project>{5fd668e8-cfe8-4512-884a-72ad8a37bfd9}</Project>
-      <Name>Faculty CRUD Form</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Major CRUD Operations Form\Major CRUD Operations Form.csproj">
       <Project>{027ea279-09ed-493e-94e8-d0c1f2054540}</Project>
       <Name>Major CRUD Operations Form</Name>

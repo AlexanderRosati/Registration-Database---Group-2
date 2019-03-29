@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main Form", "Main Form\Main Form.csproj", "{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Registration", "Registration\Registration.sqlproj", "{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Major CRUD Operations Form", "Major CRUD Operations Form\Major CRUD Operations Form.csproj", "{027EA279-09ED-493E-94E8-D0C1F2054540}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student CRUD Operations Form", "Student CRUD Operations Form\Student CRUD Operations Form.csproj", "{61E46DFD-5EBE-4FAC-876B-CA474D348AB0}"
@@ -12,10 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationEntityModel", "RegistrationEntityModel\RegistrationEntityModel.csproj", "{3FE48654-A8FF-4820-95F2-764D669C6B7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment CRUD Form", "Enrollment CRUD Form\Enrollment CRUD Form.csproj", "{60E17E57-6658-4060-B941-D788905DC6F1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faculty CRUD Form", "Faculty CRUD Form\Faculty CRUD Form.csproj", "{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Registration", "Registration\Registration.sqlproj", "{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +25,12 @@ Global
 		{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{027EA279-09ED-493E-94E8-D0C1F2054540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{027EA279-09ED-493E-94E8-D0C1F2054540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027EA279-09ED-493E-94E8-D0C1F2054540}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,16 +47,6 @@ Global
 		{60E17E57-6658-4060-B941-D788905DC6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E17E57-6658-4060-B941-D788905DC6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E17E57-6658-4060-B941-D788905DC6F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

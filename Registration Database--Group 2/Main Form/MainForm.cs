@@ -10,7 +10,6 @@ using Student_CRUD_Operations_Form;
 using Major_CRUD_Operations_Form;
 using Enrollment_CRUD_Form;
 using RegistrationEntityModel;
-using Faculty_CRUD_Form;
 
 namespace Main_Form
 {
@@ -63,20 +62,6 @@ namespace Main_Form
             {
                 enrollmentCRUDForm enrollmentCRUDForm = new enrollmentCRUDForm(RegistrationEntities);
                 enrollmentCRUDForm.Show();
-            }
-
-            else
-            {
-                MessageBox.Show("You can only have one form open at a time.");
-            }
-        }
-
-        private void facultyCRUDButton_Click(object sender, EventArgs e)
-        {
-            if (CanOpenNewForm())
-            {
-                FacultyCRUDForm facultyCRUDForm = new FacultyCRUDForm(RegistrationEntities);
-                facultyCRUDForm.Show();
             }
 
             else
