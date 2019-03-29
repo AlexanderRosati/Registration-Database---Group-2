@@ -7,25 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RegistrationEntityModel
+namespace Registration_Entity_Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Student
+    public partial class Major
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Student()
+        public Major()
         {
-            this.Enrollments = new HashSet<Enrollment>();
+            this.Students = new HashSet<Student>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public int MajorID { get; set; }
+        public string College { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
-        public virtual Major Major { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

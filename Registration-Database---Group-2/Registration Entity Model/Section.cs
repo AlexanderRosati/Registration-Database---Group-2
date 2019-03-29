@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RegistrationEntityModel
+namespace Registration_Entity_Model
 {
     using System;
     using System.Collections.Generic;

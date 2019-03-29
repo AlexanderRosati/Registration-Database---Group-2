@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Fuck You Microsoft\Documents\GitHub\Registration-Database---Group-2\Registration Database--Group 2\RegistrationEntityModel\RegistrationEntityModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Fuck You Microsoft\Desktop\Registration-Database---Group-2\Registration Entity Model\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
