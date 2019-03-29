@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Registration Entity Model")]
+[assembly: AssemblyTitle("RegistrationEntityModel")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Registration Entity Model")]
+[assembly: AssemblyProduct("RegistrationEntityModel")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("caa758d0-6b87-4f05-ae16-a0da0db92a19")]
+[assembly: Guid("3fe48654-a8ff-4820-95f2-764d669c6b7b")]
 
 // Version information for an assembly consists of the following four values:
 //

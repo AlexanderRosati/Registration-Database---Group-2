@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Registration_Entity_Model
+namespace RegistrationEntityModel
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RegistrationEntities : DbContext
+    public partial class RegistrationEntities1 : DbContext
     {
-        public RegistrationEntities()
-            : base("name=RegistrationEntities")
+        public RegistrationEntities1()
+            : base("name=RegistrationEntities1")
         {
         }
     
