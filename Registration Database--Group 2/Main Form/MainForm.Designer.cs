@@ -152,12 +152,13 @@
             this.facultyCRUDButton.TabIndex = 9;
             this.facultyCRUDButton.Text = "CRUD Operations for Faculty Table";
             this.facultyCRUDButton.UseVisualStyleBackColor = true;
+            this.facultyCRUDButton.Click += new System.EventHandler(this.facultyCRUDButton_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 262);
+            this.ClientSize = new System.Drawing.Size(654, 261);
             this.Controls.Add(this.facultyCRUDButton);
             this.Controls.Add(this.courseFilteringByDepartment);
             this.Controls.Add(this.studentFilteringByMajorButton);
