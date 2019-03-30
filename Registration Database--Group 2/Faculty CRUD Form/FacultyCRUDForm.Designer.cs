@@ -95,6 +95,7 @@
             this.updateFacultyMemberButton.TabIndex = 5;
             this.updateFacultyMemberButton.Text = "Update Faculty Member";
             this.updateFacultyMemberButton.UseVisualStyleBackColor = true;
+            this.updateFacultyMemberButton.Click += new System.EventHandler(this.updateFacultyMemberButton_Click);
             // 
             // facultyListBox
             // 
@@ -162,6 +163,7 @@
             this.deselectButton.TabIndex = 14;
             this.deselectButton.Text = "Deselect";
             this.deselectButton.UseVisualStyleBackColor = true;
+            this.deselectButton.Click += new System.EventHandler(this.deselectButton_Click);
             // 
             // FacultyCRUDForm
             // 

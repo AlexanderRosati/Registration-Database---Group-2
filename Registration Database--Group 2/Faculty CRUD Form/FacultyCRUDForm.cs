@@ -96,7 +96,7 @@ namespace Faculty_CRUD_Form
 
                 nameTextBox.Text = String.Empty;
                 phoneNumberTextBox.ResetText();
-
+                facultyListBox.Items.Clear();
                 updateListBox();
             }
         }
@@ -130,6 +130,51 @@ namespace Faculty_CRUD_Form
             else
             {
                 errorLabel.Text = "Error: You need to select the faculty member to remove below.";
+            }
+        }
+
+        private void deselectButton_Click(object sender, EventArgs e)
+        {
+            facultyListBox.SelectedItem = null;
+        }
+
+        private void updateFacultyMemberButton_Click(object sender, EventArgs e)
+        {
+            errorLabel.Text = String.Empty;
+            string phoneNumberEnteredByUser = phoneNumberTextBox.Text;
+            bool userDidNotEnterValidPhoneNumber = isNotPhoneNumber(phoneNumberEnteredByUser);
+
+            if (facultyListBox.SelectedItem == null)
+            {
+                errorLabel.Text = "Error: You must select a faculty member to modify.";
+            }
+
+            else if (nameTextBox.Text == String.Empty)
+            {
+                errorLabel.Text = "Error: You must enter the faculty member's name.";
+            }
+
+            else if (userDidNotEnterValidPhoneNumber)
+            {
+                errorLabel.Text = "Error: You did not enter a valid phone number.";
+            }
+
+            else
+            {
+                string listBoxEntry = (string)facultyListBox.SelectedItem;
+                string IDOfRecordToModifyString = listBoxEntry.Split(' ')[0];
+                int IDOfRecordToModifyInt = Convert.ToInt32(IDOfRecordToModifyString);
+
+                Faculty facultyToModify = RegistrationEntities.Faculties.Find(IDOfRecordToModifyInt);
+                facultyToModify.Name = nameTextBox.Text.ToLower();
+                facultyToModify.PhoneNumber = phoneNumberTextBox.Text;
+                RegistrationEntities.SaveChanges();
+
+                facultyListBox.Items.Clear();
+                updateListBox();
+
+                nameTextBox.Text = String.Empty;
+                phoneNumberTextBox.Text = String.Empty;
             }
         }
     }
