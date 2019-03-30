@@ -152,6 +152,7 @@
             this.removeButton.TabIndex = 13;
             this.removeButton.Text = "Remove Faculty Member";
             this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // deselectButton
             // 

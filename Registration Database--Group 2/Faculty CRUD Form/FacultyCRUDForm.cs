@@ -100,5 +100,37 @@ namespace Faculty_CRUD_Form
                 updateListBox();
             }
         }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            errorLabel.Text = String.Empty;
+
+            if (facultyListBox.SelectedItem != null)
+            {
+                string listBoxEntry = (string)facultyListBox.SelectedItem;
+                string IDOfRecordToRemoveString = listBoxEntry.Split(' ')[0];
+                int IDOfRecordToRemoveInt = Convert.ToInt32(IDOfRecordToRemoveString);
+
+                Faculty facultyToRemove = RegistrationEntities.Faculties.Find(IDOfRecordToRemoveInt);
+
+                if (facultyToRemove.Sections.Count > 0)
+                {
+                    errorLabel.Text = "You cannot delete this record because other records reference it.";
+                }
+
+                else
+                {
+                    RegistrationEntities.Faculties.Remove(facultyToRemove);
+                    RegistrationEntities.SaveChanges();
+                    facultyListBox.Items.Clear();
+                    updateListBox();
+                }
+            }
+
+            else
+            {
+                errorLabel.Text = "Error: You need to select the faculty member to remove below.";
+            }
+        }
     }
 }
