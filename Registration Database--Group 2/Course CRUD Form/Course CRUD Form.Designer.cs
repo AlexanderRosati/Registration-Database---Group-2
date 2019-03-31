@@ -115,6 +115,7 @@
 			this.CourseListBox.Name = "CourseListBox";
 			this.CourseListBox.Size = new System.Drawing.Size(458, 199);
 			this.CourseListBox.TabIndex = 8;
+			this.CourseListBox.SelectedIndexChanged += new System.EventHandler(this.CourseListBox_SelectedIndexChanged);
 			// 
 			// ErrorLabel
 			// 
@@ -166,7 +167,7 @@
 			this.ClearCourseInputButton.UseVisualStyleBackColor = true;
 			this.ClearCourseInputButton.Click += new System.EventHandler(this.ClearCourseInputButton_Click);
 			// 
-			// Form1
+			// CourseCRUDForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -185,7 +186,7 @@
 			this.Controls.Add(this.CourseCreditsTextBox);
 			this.Controls.Add(this.CourseNumberTextBox);
 			this.Controls.Add(this.CourseNameTextBox);
-			this.Name = "Form1";
+			this.Name = "CourseCRUDForm";
 			this.Text = "Course Form";
 			this.ResumeLayout(false);
 			this.PerformLayout();

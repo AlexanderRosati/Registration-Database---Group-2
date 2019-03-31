@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using RegistrationEntityModel;
@@ -156,5 +157,19 @@ namespace Course_CRUD_Form
 		{
 			return id.PadRight(10 - id.Length) + name.PadRight(75 - name.Length) + number.PadRight(20 - number.Length) + creds.PadRight(10 - creds.Length) + dept.PadRight(20 - dept.Length);
 		}
+
+		private void CourseListBox_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			string selectedCourse = CourseListBox.SelectedItem.ToString();
+			int IDofSelectedCourse = Convert.ToInt32(selectedCourse.Split(' ')[0]);
+			Course courseFromDatabase = RegEnt.Courses.Find(IDofSelectedCourse);
+
+			CourseNameTextBox.Text = courseFromDatabase.Name;
+			CourseNumberTextBox.Text = courseFromDatabase.Number;
+			CourseCreditsTextBox.Text = courseFromDatabase.Credits.ToString();
+			CourseDepartmentTextBox.Text = courseFromDatabase.Department;
+
+		}
+
 	}
 }
