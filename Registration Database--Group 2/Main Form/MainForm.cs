@@ -9,8 +9,11 @@ using System.Windows.Forms;
 using Student_CRUD_Operations_Form;
 using Major_CRUD_Operations_Form;
 using Enrollment_CRUD_Form;
+using Course_CRUD_Operations_Form;
+using Section_CRUD_Form;
 using RegistrationEntityModel;
 using Faculty_CRUD_Form;
+
 
 namespace Main_Form
 {
@@ -71,6 +74,20 @@ namespace Main_Form
             }
         }
 
+
+        private void courseCRUDButton_Click(object sender, EventArgs e)
+        {
+          if (CanOpenNewForm())
+          {
+            CourseCRUDForm courseCRUDForm = new CourseCRUDForm(RegistrationEntities);
+            courseCRUDForm.Show();
+          } else
+          {
+            MessageBox.Show("You can only have one form open at a time.");
+          }
+        }
+      }
+
         private void facultyCRUDButton_Click(object sender, EventArgs e)
         {
             if (CanOpenNewForm())
@@ -85,4 +102,5 @@ namespace Main_Form
             }
         }
     }
+
 }
