@@ -155,7 +155,7 @@
 			this.courseClearButton.TabIndex = 13;
 			this.courseClearButton.Text = "Clear";
 			this.courseClearButton.UseVisualStyleBackColor = true;
-			this.courseClearButton.Click += new System.EventHandler(this.courseClearButton_Click);
+			this.courseClearButton.Click += new System.EventHandler(this.CourseClearButton_Click);
 			// 
 			// deleteCourseButton
 			// 
@@ -269,7 +269,7 @@
 			this.updateCourseClearButton.TabIndex = 26;
 			this.updateCourseClearButton.Text = "Clear";
 			this.updateCourseClearButton.UseVisualStyleBackColor = true;
-			this.updateCourseClearButton.Click += new System.EventHandler(this.updateCourseClearButton_Click);
+			this.updateCourseClearButton.Click += new System.EventHandler(this.UpdateCourseClearButton_Click);
 			// 
 			// CourseCRUDForm
 			// 

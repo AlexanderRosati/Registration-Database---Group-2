@@ -21,7 +21,7 @@ namespace Course_CRUD_Operations_Form
 			InitializeComponent();
 
 			RegEnt = RE;
-			updateCourseListBox();
+			UpdateCourseListBox();
 			courseErrorLabel.Text = "";
 		}
 
@@ -49,11 +49,11 @@ namespace Course_CRUD_Operations_Form
 				{
 					RegEnt.Courses.Add(newCourse);
 					RegEnt.SaveChanges();
-					string listBoxEntry = $"{newCourse.Id.ToString()}	{newCourse.Name}	{newCourse.Number}	{newCourse.Credits.ToString()}	{newCourse.Department}";
+					string listBoxEntry = MakeListEntry(newCourse.Id.ToString(), newCourse.Name, newCourse.Number, newCourse.Credits.ToString(), newCourse.Department);
 					courseListBox.Items.Add(listBoxEntry);
 
-					clearTextBoxes();
-				} else
+					ClearTextBoxes();
+				} else //Conflict: Cannot have 2 courses with same course number
 				{
 					courseErrorLabel.Text = $"Error: Course {newCourse.Number} already exists";
 				}
@@ -66,18 +66,18 @@ namespace Course_CRUD_Operations_Form
 			courseErrorLabel.Text = "";
 			if(courseListBox.SelectedItem != null)
 			{
-				string listBoxEntry = courseListBox.SelectedItem.ToString();
-				//string listBoxEntryID = cellstr(get(handles.courseListBox, 'String'));
-				int itemID = Convert.ToInt32(listBoxEntry.Split(' ')[0]);
+				string selectedCourse = courseListBox.SelectedItem.ToString();
+				int itemID = Convert.ToInt32(selectedCourse.Split(' ')[0]);
 
 				Course temp = RegEnt.Courses.Find(itemID);
 
 				/* TODO: Check if has students enrolled */
 
 				RegEnt.Courses.Remove(temp);
+
 				RegEnt.SaveChanges();
-				courseListBox.Items.Clear(); //Thought loop may be faster/more efficient but it's most complex to code
-				updateCourseListBox();
+				courseListBox.Items.Clear();
+				UpdateCourseListBox();
 								
 			} else
 			{
@@ -89,60 +89,84 @@ namespace Course_CRUD_Operations_Form
 		{
 			courseErrorLabel.Text = "";
 
-			if (String.IsNullOrWhiteSpace(courseUpdateNameTextBox.Text) || String.IsNullOrWhiteSpace(courseUpdateNumberTextBox.Text) ||
-				String.IsNullOrWhiteSpace(courseUpdateCreditsTextBox.Text) || String.IsNullOrWhiteSpace(courseUpdateDepartmentTextBox.Text))
+			if (courseListBox.SelectedItem != null)
 			{
-				courseErrorLabel.Text = "Error: Did not put any name, number, credits, or department information to update.";
-			}
-			else if (courseListBox.SelectedItem != null)
+				if (String.IsNullOrWhiteSpace(courseUpdateNameTextBox.Text) || String.IsNullOrWhiteSpace(courseUpdateNumberTextBox.Text) ||
+				String.IsNullOrWhiteSpace(courseUpdateCreditsTextBox.Text) || String.IsNullOrWhiteSpace(courseUpdateDepartmentTextBox.Text))
+				{
+					courseErrorLabel.Text = "Error: Missing name, number, credits, or department information to update.";
+				}
+				else
+				{
+					// TODO: Check if database contains item id from list, change record
+					string selectedCourse = courseListBox.SelectedItem.ToString();
+					string selectedCourseNumber = courseUpdateNumberTextBox.Text;
+
+					IQueryable<Course> query = RegEnt.Courses.Where(record => record.Number == selectedCourseNumber);
+					bool isSameCourse = selectedCourse.Contains(selectedCourseNumber); //checks via course Number
+
+					if (query.Count() == 0 || isSameCourse)
+					{
+						int IDofRecordToUpated = Convert.ToInt32(selectedCourse.Split(' ')[0]);
+
+						Course courseToUpdate = RegEnt.Courses.Find(IDofRecordToUpated);
+						courseToUpdate.Name = courseUpdateNameTextBox.Text;
+						courseToUpdate.Number = courseUpdateNumberTextBox.Text;
+						courseToUpdate.Credits = Convert.ToInt32(courseUpdateCreditsTextBox.Text);
+						courseToUpdate.Department = courseUpdateDepartmentTextBox.Text;
+
+						RegEnt.SaveChanges();
+						courseListBox.Items.Clear();
+						UpdateCourseListBox();
+						ClearUpdateTextBoxes();
+					}
+				}
+			} else
 			{
 				courseErrorLabel.Text = "Error: No course selected to update";
 			}
-			else
-			{
-				// TODO: Check if database contains item id from list, change record
-			}
-			
 		}
 
 
 		/* Miscellaneous QOL Fuctions */
-		private void updateCourseListBox()
+		private void UpdateCourseListBox()
 		{
 			string listBoxEntry = null;
 
 			//Display all major records in database
 			foreach (Course course in RegEnt.Courses)
 			{
-				listBoxEntry = $"{course.Id.ToString()}	{course.Name}	{course.Number}	{course.Credits.ToString()}	{course.Department}";
+				listBoxEntry = MakeListEntry(course.Id.ToString(),	course.Name, course.Number, course.Credits.ToString(), course.Department);
 				courseListBox.Items.Add(listBoxEntry);
 			}
 		}
 
-		private void clearTextBoxes()
+		private void ClearTextBoxes()
 		{
 			courseNameTextBox.Text = "";
 			courseNumTextBox.Text = "";
 			courseCreditsTextBox.Text = "";
 			courseDepartmentTextBox.Text = "";
 		}
-		private void clearUpdateTextBoxes()
+		private void ClearUpdateTextBoxes()
 		{
 			courseUpdateNameTextBox.Text = "";
 			courseUpdateNumberTextBox.Text = "";
 			courseUpdateCreditsTextBox.Text = "";
 			courseUpdateDepartmentTextBox.Text = "";
 		}
-
-		private void courseClearButton_Click(object sender, EventArgs e)
+		private string MakeListEntry(string id, string name, string number, string creds, string dept)
 		{
-			clearTextBoxes();
+			return id.PadRight(10-id.Length) + name.PadRight(75-name.Length) + number.PadRight(20-number.Length) + creds.PadRight(10-creds.Length) + dept.PadRight(20-dept.Length);
 		}
 
-		private void updateCourseClearButton_Click(object sender, EventArgs e)
+		private void CourseClearButton_Click(object sender, EventArgs e)
 		{
-			clearUpdateTextBoxes();
+			ClearTextBoxes();
 		}
-
+		private void UpdateCourseClearButton_Click(object sender, EventArgs e)
+		{
+			ClearUpdateTextBoxes();
+		}
 	}
 }
