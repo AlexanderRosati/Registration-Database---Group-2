@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main Form", "Main Form\Main Form.csproj", "{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FA6C61D4-C0BE-438A-8034-CE18EBDA56AE} = {FA6C61D4-C0BE-438A-8034-CE18EBDA56AE}
+	EndProjectSection
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Registration", "Registration\Registration.sqlproj", "{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}"
 EndProject
