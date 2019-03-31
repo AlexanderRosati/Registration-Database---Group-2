@@ -1,6 +1,6 @@
 ﻿namespace Section_CRUD_Form
 {
-	partial class Form1
+	partial class SectionCRUDFom
 	{
 		/// <summary>
 		/// Required designer variable.

@@ -6,13 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RegistrationEntityModel;
 
 
 namespace Section_CRUD_Form
 {
-	public partial class Form1 : Form
+	public partial class SectionCRUDFom : Form
 	{
-		public Form1()
+		public SectionCRUDFom()
 		{
 			InitializeComponent();
 		}
