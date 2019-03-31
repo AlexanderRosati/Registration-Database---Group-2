@@ -5,6 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main Form", "Main Form\Main Form.csproj", "{5FFF52E9-1DC8-4BDD-90EE-7CFEB5B96FD5}"
 	ProjectSection(ProjectDependencies) = postProject
+		{D93E2A36-7D6B-4FE1-BBDF-005ABB5016F0} = {D93E2A36-7D6B-4FE1-BBDF-005ABB5016F0}
 		{FA6C61D4-C0BE-438A-8034-CE18EBDA56AE} = {FA6C61D4-C0BE-438A-8034-CE18EBDA56AE}
 	EndProjectSection
 EndProject
@@ -18,11 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationEntityModel", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment CRUD Form", "Enrollment CRUD Form\Enrollment CRUD Form.csproj", "{60E17E57-6658-4060-B941-D788905DC6F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course CRUD Operations Form", "Course CRUD Operations Form\Course CRUD Operations Form.csproj", "{FA6C61D4-C0BE-438A-8034-CE18EBDA56AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course CRUD Form", "Course CRUD Operations Form\Course CRUD Form.csproj", "{FA6C61D4-C0BE-438A-8034-CE18EBDA56AE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A} = {66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}
 		{3FE48654-A8FF-4820-95F2-764D669C6B7B} = {3FE48654-A8FF-4820-95F2-764D669C6B7B}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section CRUD Form", "Section CRUD Form\Section CRUD Form.csproj", "{D93E2A36-7D6B-4FE1-BBDF-005ABB5016F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +63,10 @@ Global
 		{FA6C61D4-C0BE-438A-8034-CE18EBDA56AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA6C61D4-C0BE-438A-8034-CE18EBDA56AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA6C61D4-C0BE-438A-8034-CE18EBDA56AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93E2A36-7D6B-4FE1-BBDF-005ABB5016F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93E2A36-7D6B-4FE1-BBDF-005ABB5016F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93E2A36-7D6B-4FE1-BBDF-005ABB5016F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93E2A36-7D6B-4FE1-BBDF-005ABB5016F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

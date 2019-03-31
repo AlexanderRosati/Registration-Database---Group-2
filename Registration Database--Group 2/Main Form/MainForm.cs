@@ -9,8 +9,8 @@ using System.Windows.Forms;
 using Student_CRUD_Operations_Form;
 using Major_CRUD_Operations_Form;
 using Enrollment_CRUD_Form;
-
 using RegistrationEntityModel;
+
 
 namespace Main_Form
 {
