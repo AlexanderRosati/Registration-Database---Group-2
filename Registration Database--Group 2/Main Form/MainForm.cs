@@ -11,6 +11,7 @@ using Major_CRUD_Operations_Form;
 using Enrollment_CRUD_Form;
 using RegistrationEntityModel;
 using Faculty_CRUD_Form;
+using Course_CRUD_Form;
 
 namespace Main_Form
 {
@@ -84,5 +85,19 @@ namespace Main_Form
                 MessageBox.Show("You can only have one form open at a time.");
             }
         }
-    }
+
+		private void courseCRUDButton_Click(object sender, EventArgs e)
+		{
+			if (CanOpenNewForm())
+			{
+				CourseCRUDForm facultyCRUDForm = new CourseCRUDForm(RegistrationEntities);
+				facultyCRUDForm.Show();
+			}
+
+			else
+			{
+				MessageBox.Show("You can only have one form open at a time.");
+			}
+		}
+	}
 }
