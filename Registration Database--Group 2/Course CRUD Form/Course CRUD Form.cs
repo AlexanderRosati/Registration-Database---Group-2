@@ -52,7 +52,6 @@ namespace Course_CRUD_Form
 					RegEnt.SaveChanges();
 					string listBoxEntry = MakeListEntry(newCourse.Id.ToString(), newCourse.Name, newCourse.Number, newCourse.Credits.ToString(), newCourse.Department);
 					CourseListBox.Items.Add(listBoxEntry);
-
 					ClearTextBoxes();
 				}
 				else //Conflict: Cannot have 2 courses with same course number
@@ -75,7 +74,6 @@ namespace Course_CRUD_Form
 				}
 				else
 				{
-					// TODO: Check if database contains item id from list, change record
 					string selectedCourse = CourseListBox.SelectedItem.ToString();
 					string selectedCourseNumber = CourseNumberTextBox.Text;
 
@@ -93,7 +91,6 @@ namespace Course_CRUD_Form
 						courseToUpdate.Department = CourseDepartmentTextBox.Text;
 
 						RegEnt.SaveChanges();
-						CourseListBox.Items.Clear();
 						UpdateCourseListBox();
 						ClearTextBoxes();
 					}
@@ -115,18 +112,16 @@ namespace Course_CRUD_Form
 
 				Course temp = RegEnt.Courses.Find(itemID);
 
-				/* TODO: Check if has students enrolled */
+				/* TODO: Check if has students enrolled? */
 
 				RegEnt.Courses.Remove(temp);
-
 				RegEnt.SaveChanges();
-				CourseListBox.Items.Clear();
 				UpdateCourseListBox();
 
 			}
 			else
 			{
-				ErrorLabel.Text = "Please select a course to delete from the list";
+				ErrorLabel.Text = "Error: Please select a course to delete.";
 			}
 		}
 
@@ -137,13 +132,12 @@ namespace Course_CRUD_Form
 
 		private void UpdateCourseListBox()
 		{
-			string listBoxEntry = null;
+			CourseListBox.Items.Clear();
 
 			//Display all major records in database
 			foreach (Course course in RegEnt.Courses)
 			{
-				listBoxEntry = MakeListEntry(course.Id.ToString(), course.Name, course.Number, course.Credits.ToString(), course.Department);
-				CourseListBox.Items.Add(listBoxEntry);
+				CourseListBox.Items.Add(MakeListEntry(course.Id.ToString(), course.Name, course.Number, course.Credits.ToString(), course.Department));
 			}
 		}
 		private void ClearTextBoxes()
@@ -155,19 +149,23 @@ namespace Course_CRUD_Form
 		}
 		private string MakeListEntry(string id, string name, string number, string creds, string dept)
 		{
-			return id.PadRight(10 - id.Length) + name.PadRight(75 - name.Length) + number.PadRight(20 - number.Length) + creds.PadRight(10 - creds.Length) + dept.PadRight(20 - dept.Length);
+			return id.PadRight(8) + name.PadRight(50) + number.PadRight(10) + creds.PadRight(8) + dept;
 		}
 
+		//Auto-fills required input boxes with selected item's information for easier updating
 		private void CourseListBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			string selectedCourse = CourseListBox.SelectedItem.ToString();
-			int IDofSelectedCourse = Convert.ToInt32(selectedCourse.Split(' ')[0]);
-			Course courseFromDatabase = RegEnt.Courses.Find(IDofSelectedCourse);
+			if(CourseListBox.SelectedItem != null)
+			{
+				string selectedCourse = CourseListBox.SelectedItem.ToString();
+				int IDofSelectedCourse = Convert.ToInt32(selectedCourse.Split(' ')[0]);
+				Course courseFromDatabase = RegEnt.Courses.Find(IDofSelectedCourse);
 
-			CourseNameTextBox.Text = courseFromDatabase.Name;
-			CourseNumberTextBox.Text = courseFromDatabase.Number;
-			CourseCreditsTextBox.Text = courseFromDatabase.Credits.ToString();
-			CourseDepartmentTextBox.Text = courseFromDatabase.Department;
+				CourseNameTextBox.Text = courseFromDatabase.Name;
+				CourseNumberTextBox.Text = courseFromDatabase.Number;
+				CourseCreditsTextBox.Text = courseFromDatabase.Credits.ToString();
+				CourseDepartmentTextBox.Text = courseFromDatabase.Department;
+			}
 
 		}
 
