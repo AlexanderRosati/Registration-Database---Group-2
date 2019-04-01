@@ -11,6 +11,9 @@ using Major_CRUD_Operations_Form;
 using Enrollment_CRUD_Form;
 using RegistrationEntityModel;
 
+using Section_Filtering_Form;
+using Enrollment_Filtering_Form;
+
 namespace Main_Form
 {
     public partial class mainForm : Form
@@ -62,6 +65,34 @@ namespace Main_Form
             {
                 enrollmentCRUDForm enrollmentCRUDForm = new enrollmentCRUDForm(RegistrationEntities);
                 enrollmentCRUDForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+
+        private void sectionFilteringBySemesterButton_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                SectionFilteringForm sectionFilteringForm = new SectionFilteringForm(RegistrationEntities);
+                sectionFilteringForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+
+        private void enrollmentFilteringByStudent_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                EnrollmentFilteringForm enrollmentFilteringForm = new EnrollmentFilteringForm(RegistrationEntities);
+                enrollmentFilteringForm.Show();
             }
 
             else
