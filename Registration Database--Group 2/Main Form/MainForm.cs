@@ -12,6 +12,7 @@ using Enrollment_CRUD_Form;
 using RegistrationEntityModel;
 using Faculty_CRUD_Form;
 using Course_CRUD_Form;
+using Section_CRUD_Form;
 
 namespace Main_Form
 {
@@ -97,6 +98,15 @@ namespace Main_Form
 			else
 			{
 				MessageBox.Show("You can only have one form open at a time.");
+			}
+		}
+
+		private void sectionCRUDButton_Click(object sender, EventArgs e)
+		{
+			if (CanOpenNewForm())
+			{
+				SectionCRUDForm sectionCRUDForm = new SectionCRUDForm(RegistrationEntities);
+				sectionCRUDForm.Show();
 			}
 		}
 	}

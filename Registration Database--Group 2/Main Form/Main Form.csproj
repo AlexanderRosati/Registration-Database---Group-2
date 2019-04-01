@@ -104,6 +104,10 @@
       <Project>{027ea279-09ed-493e-94e8-d0c1f2054540}</Project>
       <Name>Major CRUD Operations Form</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Section CRUD Form\Section CRUD Form.csproj">
+      <Project>{d575d179-0124-445f-bceb-5dbe6476003b}</Project>
+      <Name>Section CRUD Form</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Student CRUD Operations Form\Student CRUD Operations Form.csproj">
       <Project>{61e46dfd-5ebe-4fac-876b-ca474d348ab0}</Project>
       <Name>Student CRUD Operations Form</Name>
