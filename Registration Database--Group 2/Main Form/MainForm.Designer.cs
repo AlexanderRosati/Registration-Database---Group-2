@@ -120,6 +120,7 @@
 			this.sectionCRUDButton.TabIndex = 6;
 			this.sectionCRUDButton.Text = "CRUD Operations for Section Table";
 			this.sectionCRUDButton.UseVisualStyleBackColor = true;
+			this.sectionCRUDButton.Click += new System.EventHandler(this.sectionCRUDButton_Click);
 			// 
 			// studentFilteringByMajorButton
 			// 

@@ -22,6 +22,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Registration", "Registratio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course CRUD Form", "Course CRUD Form\Course CRUD Form.csproj", "{ECD27720-E424-454C-A4BE-42CB7B39E150}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section CRUD Form", "Section CRUD Form\Section CRUD Form.csproj", "{D575D179-0124-445F-BCEB-5DBE6476003B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{ECD27720-E424-454C-A4BE-42CB7B39E150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECD27720-E424-454C-A4BE-42CB7B39E150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECD27720-E424-454C-A4BE-42CB7B39E150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D575D179-0124-445F-BCEB-5DBE6476003B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D575D179-0124-445F-BCEB-5DBE6476003B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D575D179-0124-445F-BCEB-5DBE6476003B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D575D179-0124-445F-BCEB-5DBE6476003B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
