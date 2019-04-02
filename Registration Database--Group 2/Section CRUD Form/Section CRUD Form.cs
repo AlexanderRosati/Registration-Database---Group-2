@@ -91,7 +91,7 @@ namespace Section_CRUD_Form
 			{
 				if (HasEmptyBoxes())
 				{
-					ErrorLabel.Text = "Error: Missing information. All inputs should be filled";
+					ErrorLabel.Text = "Error: Missing information. All inputs should be filled.";
 				}
 				else
 				{
