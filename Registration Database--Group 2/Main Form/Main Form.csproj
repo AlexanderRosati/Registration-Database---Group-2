@@ -92,6 +92,10 @@
       <Project>{ecd27720-e424-454c-a4be-42cb7b39e150}</Project>
       <Name>Course CRUD Form</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Course Filter By Department\Course Filter By Department.csproj">
+      <Project>{4003e585-4323-4e14-956c-2d0fd8e4fa45}</Project>
+      <Name>Course Filter By Department</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Enrollment CRUD Form\Enrollment CRUD Form.csproj">
       <Project>{60e17e57-6658-4060-b941-d788905dc6f1}</Project>
       <Name>Enrollment CRUD Form</Name>

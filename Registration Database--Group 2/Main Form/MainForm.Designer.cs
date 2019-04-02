@@ -146,6 +146,7 @@
             this.courseFilteringByDepartment.TabIndex = 8;
             this.courseFilteringByDepartment.Text = "Course Filtering by Department";
             this.courseFilteringByDepartment.UseVisualStyleBackColor = true;
+            this.courseFilteringByDepartment.Click += new System.EventHandler(this.courseFilteringByDepartment_Click);
             // 
             // facultyCRUDButton
             // 

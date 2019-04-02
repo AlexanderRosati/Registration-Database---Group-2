@@ -17,6 +17,7 @@ using Section_CRUD_Form;
 using Section_Filtering_Form;
 using Enrollment_Filtering_Form;
 using Student_Filtering_By_Major_Form;
+using Course_Filter_By_Department;
 
 namespace Main_Form
 {
@@ -164,5 +165,18 @@ namespace Main_Form
             }
 		}
 
+        private void courseFilteringByDepartment_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                CourseFilteringByDepartmentForm CourseFilteringByDepartmentForm = new CourseFilteringByDepartmentForm(RegistrationEntities);
+                CourseFilteringByDepartmentForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
     }
 }

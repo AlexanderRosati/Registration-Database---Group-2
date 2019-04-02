@@ -24,11 +24,11 @@ namespace Student_Filtering_By_Major_Form
             InitializeComponent();
             RegistrationEntities = RE;
             errorLabel.Text = String.Empty;
-            updateListBox();
+            fillListBoxWithEverythingInTable();
             loadMajorIntoComboBox();
         }
 
-        private void updateListBox()
+        private void fillListBoxWithEverythingInTable()
         {
             string listBoxEntry = null;
             foreach (Student s in RegistrationEntities.Students)
@@ -49,7 +49,40 @@ namespace Student_Filtering_By_Major_Form
 
         private void applyButton_Click(object sender, EventArgs e)
         {
+            errorLabel.Text = String.Empty;
 
+            if (majorComboBox.SelectedItem != null)
+            {
+                filterStudentsListBox.Items.Clear();
+                string studentRecordsMajor = null;
+                string listBoxEntry = null;
+                string selectedMajor = (string)majorComboBox.SelectedItem;
+
+                foreach (Student s in RegistrationEntities.Students)
+                {
+                    studentRecordsMajor = s.Major.Name;
+
+                    if (studentRecordsMajor == selectedMajor)
+                    {
+                        listBoxEntry = s.Id.ToString().PadRight(10) + s.Name.PadRight(54)
+                                       + s.Major.Name.PadRight(54) + s.Major.College;
+                        filterStudentsListBox.Items.Add(listBoxEntry);
+                    }
+                }
+            }
+
+            else
+            {
+                errorLabel.Text = "Error: You must select a major.";
+            }
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            errorLabel.Text = String.Empty;
+            majorComboBox.SelectedItem = null;
+            filterStudentsListBox.Items.Clear();
+            fillListBoxWithEverythingInTable();
         }
     }
 }

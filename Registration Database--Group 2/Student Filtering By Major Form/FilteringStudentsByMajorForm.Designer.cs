@@ -37,6 +37,7 @@
             this.majorListBoxLabel = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // majorComboBox
@@ -78,7 +79,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(272, 26);
+            this.nameLabel.Location = new System.Drawing.Point(258, 26);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(38, 13);
             this.nameLabel.TabIndex = 4;
@@ -115,19 +116,30 @@
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
-            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(12, 117);
+            this.errorLabel.Location = new System.Drawing.Point(12, 144);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(78, 13);
+            this.errorLabel.Size = new System.Drawing.Size(70, 12);
             this.errorLabel.TabIndex = 9;
             this.errorLabel.Text = "Lorem Ipsum";
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(15, 109);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(160, 23);
+            this.resetButton.TabIndex = 10;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // studentFilteringByMajorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1399, 368);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.majorListBoxLabel);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.Label majorListBoxLabel;
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Button resetButton;
     }
 }
 
