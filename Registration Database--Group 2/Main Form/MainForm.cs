@@ -120,7 +120,6 @@ namespace Main_Form
                 MessageBox.Show("You can only have one form open at a time.");
             }
         }
-    }
     
 		private void courseCRUDButton_Click(object sender, EventArgs e)
 		{
