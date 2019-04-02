@@ -16,7 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationEntityModel", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment CRUD Form", "Enrollment CRUD Form\Enrollment CRUD Form.csproj", "{60E17E57-6658-4060-B941-D788905DC6F1}"
 EndProject
-
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section Filtering Form", "Section Filtering Form\Section Filtering Form.csproj", "{C55CD495-F1D5-455E-A851-BABBAE8FB819}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment Filtering Form", "Enrollment Filtering Form\Enrollment Filtering Form.csproj", "{C54D9CC0-0083-4F46-9418-1C636895CC1A}"
@@ -28,6 +27,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course CRUD Form", "Course CRUD Form\Course CRUD Form.csproj", "{ECD27720-E424-454C-A4BE-42CB7B39E150}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section CRUD Form", "Section CRUD Form\Section CRUD Form.csproj", "{D575D179-0124-445F-BCEB-5DBE6476003B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student Filtering By Major Form", "Student Filtering By Major Form\Student Filtering By Major Form.csproj", "{5AF2B285-EBC6-4728-BAFE-5983AAAFDFB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +82,10 @@ Global
 		{D575D179-0124-445F-BCEB-5DBE6476003B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D575D179-0124-445F-BCEB-5DBE6476003B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D575D179-0124-445F-BCEB-5DBE6476003B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF2B285-EBC6-4728-BAFE-5983AAAFDFB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF2B285-EBC6-4728-BAFE-5983AAAFDFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF2B285-EBC6-4728-BAFE-5983AAAFDFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF2B285-EBC6-4728-BAFE-5983AAAFDFB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

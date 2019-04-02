@@ -124,6 +124,10 @@
       <Project>{61e46dfd-5ebe-4fac-876b-ca474d348ab0}</Project>
       <Name>Student CRUD Operations Form</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Student Filtering By Major Form\Student Filtering By Major Form.csproj">
+      <Project>{5af2b285-ebc6-4728-bafe-5983aaafdfb5}</Project>
+      <Name>Student Filtering By Major Form</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

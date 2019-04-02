@@ -16,6 +16,7 @@ using Section_CRUD_Form;
 
 using Section_Filtering_Form;
 using Enrollment_Filtering_Form;
+using Student_Filtering_By_Major_Form;
 
 namespace Main_Form
 {
@@ -54,6 +55,20 @@ namespace Main_Form
             {
                 studentCRUDForm studentCRUDForm = new Student_CRUD_Operations_Form.studentCRUDForm(RegistrationEntities);
                 studentCRUDForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+
+        private void studentFilteringByMajorButton_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                studentFilteringByMajorForm studentFilteringByMajorForm = new studentFilteringByMajorForm(RegistrationEntities);
+                studentFilteringByMajorForm.Show();
             }
 
             else
@@ -143,10 +158,11 @@ namespace Main_Form
 				sectionCRUDForm.Show();
 			}
       
-      else
-      {
-        MessageBox.Show("You can only have one form open at a time.");
-      }
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
 		}
-	}
+
+    }
 }
