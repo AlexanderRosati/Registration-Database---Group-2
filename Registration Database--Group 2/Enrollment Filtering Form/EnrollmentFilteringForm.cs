@@ -67,6 +67,9 @@ namespace Enrollment_Filtering_Form
         private void RetrieveItems()
         {
 
+            //The current student name in uppercase
+            string uppercaseStudentName;
+
             //Clear results
             results.Clear();
 
@@ -74,8 +77,10 @@ namespace Enrollment_Filtering_Form
             foreach (Enrollment result in RegistrationEntities.Enrollments.ToList())
             {
 
+                uppercaseStudentName = result.Student.Name.ToUpper();
+
                 //If the search filter is found in the current result
-                if (result.Student.Name.Contains(searchFilter))
+                if (uppercaseStudentName.Contains(searchFilter))
                 {
 
                     //Add the result to the list
@@ -119,7 +124,7 @@ namespace Enrollment_Filtering_Form
         {
 
             //Get the new search filter
-            searchFilter = studentNameTextBox.Text;
+            searchFilter = studentNameTextBox.Text.ToUpper();
 
             //Update results
             RetrieveItems();
