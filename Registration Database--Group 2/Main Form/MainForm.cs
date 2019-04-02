@@ -10,6 +10,9 @@ using Student_CRUD_Operations_Form;
 using Major_CRUD_Operations_Form;
 using Enrollment_CRUD_Form;
 using RegistrationEntityModel;
+using Faculty_CRUD_Form;
+using Course_CRUD_Form;
+using Section_CRUD_Form;
 
 using Section_Filtering_Form;
 using Enrollment_Filtering_Form;
@@ -73,6 +76,7 @@ namespace Main_Form
             }
         }
 
+
         private void sectionFilteringBySemesterButton_Click(object sender, EventArgs e)
         {
             if (CanOpenNewForm())
@@ -80,12 +84,28 @@ namespace Main_Form
                 SectionFilteringForm sectionFilteringForm = new SectionFilteringForm(RegistrationEntities);
                 sectionFilteringForm.Show();
             }
+            
+            else
+            {
+               MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+        
+        private void facultyCRUDButton_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                FacultyCRUDForm facultyCRUDForm = new FacultyCRUDForm(RegistrationEntities);
+                facultyCRUDForm.Show();
+
+            }
 
             else
             {
                 MessageBox.Show("You can only have one form open at a time.");
             }
         }
+
 
         private void enrollmentFilteringByStudent_Click(object sender, EventArgs e)
         {
@@ -101,4 +121,33 @@ namespace Main_Form
             }
         }
     }
+    
+		private void courseCRUDButton_Click(object sender, EventArgs e)
+		{
+			if (CanOpenNewForm())
+			{
+				CourseCRUDForm facultyCRUDForm = new CourseCRUDForm(RegistrationEntities);
+				facultyCRUDForm.Show();
+			}
+
+			else
+			{
+				MessageBox.Show("You can only have one form open at a time.");
+			}
+		}
+
+		private void sectionCRUDButton_Click(object sender, EventArgs e)
+		{
+			if (CanOpenNewForm())
+			{
+				SectionCRUDForm sectionCRUDForm = new SectionCRUDForm(RegistrationEntities);
+				sectionCRUDForm.Show();
+			}
+      
+      else
+      {
+        MessageBox.Show("You can only have one form open at a time.");
+      }
+		}
+	}
 }
