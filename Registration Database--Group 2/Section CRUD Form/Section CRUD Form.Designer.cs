@@ -192,7 +192,7 @@
 			// 
 			this.ErrorLabel.AutoSize = true;
 			this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-			this.ErrorLabel.Location = new System.Drawing.Point(31, 175);
+			this.ErrorLabel.Location = new System.Drawing.Point(31, 215);
 			this.ErrorLabel.Name = "ErrorLabel";
 			this.ErrorLabel.Size = new System.Drawing.Size(29, 13);
 			this.ErrorLabel.TabIndex = 15;
