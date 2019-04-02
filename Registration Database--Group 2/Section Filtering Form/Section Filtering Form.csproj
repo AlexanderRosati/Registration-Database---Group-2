@@ -4,12 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{027EA279-09ED-493E-94E8-D0C1F2054540}</ProjectGuid>
+    <ProjectGuid>{C55CD495-F1D5-455E-A851-BABBAE8FB819}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Major_CRUD_Operations_Form</RootNamespace>
-    <AssemblyName>Major CRUD Operations Form</AssemblyName>
+    <RootNamespace>Section_Filtering_Form</RootNamespace>
+    <AssemblyName>Section Filtering Form</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,34 +39,30 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="RegistrationEntityModel">
-      <HintPath>..\RegistrationEntityModel\bin\Debug\RegistrationEntityModel.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MajorCRUDForm.cs">
+    <Compile Include="SectionFilteringForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MajorCRUDForm.Designer.cs">
-      <DependentUpon>MajorCRUDForm.cs</DependentUpon>
+    <Compile Include="SectionFilteringForm.Designer.cs">
+      <DependentUpon>SectionFilteringForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MajorCRUDForm.resx">
-      <DependentUpon>MajorCRUDForm.cs</DependentUpon>
+    <EmbeddedResource Include="SectionFilteringForm.resx">
+      <DependentUpon>SectionFilteringForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,8 +72,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,9 +86,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RegistrationEntityModel\RegistrationEntityModel.csproj">
+      <Project>{3fe48654-a8ff-4820-95f2-764d669c6b7b}</Project>
+      <Name>RegistrationEntityModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Registration\Registration.sqlproj">
       <Project>{66f34f32-7eae-4f7a-87da-dad45d06ef0a}</Project>
       <Name>Registration</Name>

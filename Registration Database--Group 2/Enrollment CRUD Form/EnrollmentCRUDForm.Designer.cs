@@ -48,140 +48,155 @@
             // sectionComboBox
             // 
             this.sectionComboBox.FormattingEnabled = true;
-            this.sectionComboBox.Location = new System.Drawing.Point(64, 32);
+            this.sectionComboBox.Location = new System.Drawing.Point(85, 39);
+            this.sectionComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sectionComboBox.Name = "sectionComboBox";
-            this.sectionComboBox.Size = new System.Drawing.Size(121, 21);
+            this.sectionComboBox.Size = new System.Drawing.Size(160, 24);
             this.sectionComboBox.TabIndex = 0;
             // 
             // studentComboBox
             // 
             this.studentComboBox.FormattingEnabled = true;
-            this.studentComboBox.Location = new System.Drawing.Point(64, 62);
+            this.studentComboBox.Location = new System.Drawing.Point(85, 76);
+            this.studentComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.studentComboBox.Name = "studentComboBox";
-            this.studentComboBox.Size = new System.Drawing.Size(121, 21);
+            this.studentComboBox.Size = new System.Drawing.Size(160, 24);
             this.studentComboBox.TabIndex = 1;
             // 
             // gradeComboBox
             // 
             this.gradeComboBox.FormattingEnabled = true;
-            this.gradeComboBox.Location = new System.Drawing.Point(64, 95);
+            this.gradeComboBox.Location = new System.Drawing.Point(85, 117);
+            this.gradeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gradeComboBox.Name = "gradeComboBox";
-            this.gradeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.gradeComboBox.Size = new System.Drawing.Size(160, 24);
             this.gradeComboBox.TabIndex = 2;
             // 
             // sectionLabel
             // 
             this.sectionLabel.AutoSize = true;
-            this.sectionLabel.Location = new System.Drawing.Point(12, 32);
+            this.sectionLabel.Location = new System.Drawing.Point(16, 39);
+            this.sectionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sectionLabel.Name = "sectionLabel";
-            this.sectionLabel.Size = new System.Drawing.Size(46, 13);
+            this.sectionLabel.Size = new System.Drawing.Size(59, 17);
             this.sectionLabel.TabIndex = 3;
             this.sectionLabel.Text = "Section:";
             // 
             // studentLabel
             // 
             this.studentLabel.AutoSize = true;
-            this.studentLabel.Location = new System.Drawing.Point(11, 62);
+            this.studentLabel.Location = new System.Drawing.Point(15, 76);
+            this.studentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.studentLabel.Name = "studentLabel";
-            this.studentLabel.Size = new System.Drawing.Size(47, 13);
+            this.studentLabel.Size = new System.Drawing.Size(61, 17);
             this.studentLabel.TabIndex = 4;
             this.studentLabel.Text = "Student:";
             // 
             // gradeLabel
             // 
             this.gradeLabel.AutoSize = true;
-            this.gradeLabel.Location = new System.Drawing.Point(12, 95);
+            this.gradeLabel.Location = new System.Drawing.Point(16, 117);
+            this.gradeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gradeLabel.Name = "gradeLabel";
-            this.gradeLabel.Size = new System.Drawing.Size(39, 13);
+            this.gradeLabel.Size = new System.Drawing.Size(52, 17);
             this.gradeLabel.TabIndex = 5;
             this.gradeLabel.Text = "Grade:";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(202, 32);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(269, 39);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(741, 251);
+            this.listBox1.Size = new System.Drawing.Size(987, 308);
             this.listBox1.TabIndex = 6;
             // 
             // IDLabel
             // 
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Location = new System.Drawing.Point(202, 13);
+            this.IDLabel.Location = new System.Drawing.Point(269, 16);
+            this.IDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(21, 13);
+            this.IDLabel.Size = new System.Drawing.Size(25, 17);
             this.IDLabel.TabIndex = 7;
             this.IDLabel.Text = "ID:";
             // 
             // listBoxSectionLabel
             // 
             this.listBoxSectionLabel.AutoSize = true;
-            this.listBoxSectionLabel.Location = new System.Drawing.Point(290, 13);
+            this.listBoxSectionLabel.Location = new System.Drawing.Point(387, 16);
+            this.listBoxSectionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.listBoxSectionLabel.Name = "listBoxSectionLabel";
-            this.listBoxSectionLabel.Size = new System.Drawing.Size(46, 13);
+            this.listBoxSectionLabel.Size = new System.Drawing.Size(59, 17);
             this.listBoxSectionLabel.TabIndex = 8;
             this.listBoxSectionLabel.Text = "Section:";
             // 
             // studentListBoxLabel
             // 
             this.studentListBoxLabel.AutoSize = true;
-            this.studentListBoxLabel.Location = new System.Drawing.Point(449, 13);
+            this.studentListBoxLabel.Location = new System.Drawing.Point(599, 16);
+            this.studentListBoxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.studentListBoxLabel.Name = "studentListBoxLabel";
-            this.studentListBoxLabel.Size = new System.Drawing.Size(47, 13);
+            this.studentListBoxLabel.Size = new System.Drawing.Size(61, 17);
             this.studentListBoxLabel.TabIndex = 9;
             this.studentListBoxLabel.Text = "Student:";
             // 
             // gradeListBoxLabel
             // 
             this.gradeListBoxLabel.AutoSize = true;
-            this.gradeListBoxLabel.Location = new System.Drawing.Point(611, 13);
+            this.gradeListBoxLabel.Location = new System.Drawing.Point(815, 16);
+            this.gradeListBoxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gradeListBoxLabel.Name = "gradeListBoxLabel";
-            this.gradeListBoxLabel.Size = new System.Drawing.Size(39, 13);
+            this.gradeListBoxLabel.Size = new System.Drawing.Size(52, 17);
             this.gradeListBoxLabel.TabIndex = 10;
             this.gradeListBoxLabel.Text = "Grade:";
             // 
             // addEnrollmentButton
             // 
-            this.addEnrollmentButton.Location = new System.Drawing.Point(15, 122);
+            this.addEnrollmentButton.Location = new System.Drawing.Point(20, 150);
+            this.addEnrollmentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addEnrollmentButton.Name = "addEnrollmentButton";
-            this.addEnrollmentButton.Size = new System.Drawing.Size(170, 23);
+            this.addEnrollmentButton.Size = new System.Drawing.Size(227, 28);
             this.addEnrollmentButton.TabIndex = 11;
             this.addEnrollmentButton.Text = "Add Enrollment";
             this.addEnrollmentButton.UseVisualStyleBackColor = true;
-            this.addEnrollmentButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // updateEnrollmentButton
             // 
-            this.updateEnrollmentButton.Location = new System.Drawing.Point(15, 151);
+            this.updateEnrollmentButton.Location = new System.Drawing.Point(20, 186);
+            this.updateEnrollmentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updateEnrollmentButton.Name = "updateEnrollmentButton";
-            this.updateEnrollmentButton.Size = new System.Drawing.Size(170, 23);
+            this.updateEnrollmentButton.Size = new System.Drawing.Size(227, 28);
             this.updateEnrollmentButton.TabIndex = 12;
             this.updateEnrollmentButton.Text = "Update Enrollment";
             this.updateEnrollmentButton.UseVisualStyleBackColor = true;
             // 
             // deleteEnrollmentButton
             // 
-            this.deleteEnrollmentButton.Location = new System.Drawing.Point(15, 181);
+            this.deleteEnrollmentButton.Location = new System.Drawing.Point(20, 223);
+            this.deleteEnrollmentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteEnrollmentButton.Name = "deleteEnrollmentButton";
-            this.deleteEnrollmentButton.Size = new System.Drawing.Size(170, 23);
+            this.deleteEnrollmentButton.Size = new System.Drawing.Size(227, 28);
             this.deleteEnrollmentButton.TabIndex = 13;
             this.deleteEnrollmentButton.Text = "Remove Enrollment";
             this.deleteEnrollmentButton.UseVisualStyleBackColor = true;
             // 
             // deselectButton
             // 
-            this.deselectButton.Location = new System.Drawing.Point(15, 211);
+            this.deselectButton.Location = new System.Drawing.Point(20, 260);
+            this.deselectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deselectButton.Name = "deselectButton";
-            this.deselectButton.Size = new System.Drawing.Size(170, 23);
+            this.deselectButton.Size = new System.Drawing.Size(227, 28);
             this.deselectButton.TabIndex = 14;
             this.deselectButton.Text = "Deselect";
             this.deselectButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // enrollmentCRUDForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 299);
+            this.ClientSize = new System.Drawing.Size(1271, 357);
             this.Controls.Add(this.deselectButton);
             this.Controls.Add(this.deleteEnrollmentButton);
             this.Controls.Add(this.updateEnrollmentButton);
@@ -197,10 +212,11 @@
             this.Controls.Add(this.gradeComboBox);
             this.Controls.Add(this.studentComboBox);
             this.Controls.Add(this.sectionComboBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(971, 337);
-            this.MinimumSize = new System.Drawing.Size(971, 337);
-            this.Name = "Form1";
+            this.MaximumSize = new System.Drawing.Size(1289, 404);
+            this.MinimumSize = new System.Drawing.Size(1289, 404);
+            this.Name = "enrollmentCRUDForm";
             this.Text = "Enrollment CRUD Form";
             this.ResumeLayout(false);
             this.PerformLayout();

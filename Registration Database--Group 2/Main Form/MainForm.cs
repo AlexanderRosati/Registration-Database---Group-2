@@ -14,6 +14,9 @@ using Faculty_CRUD_Form;
 using Course_CRUD_Form;
 using Section_CRUD_Form;
 
+using Section_Filtering_Form;
+using Enrollment_Filtering_Form;
+
 namespace Main_Form
 {
     public partial class mainForm : Form
@@ -73,12 +76,28 @@ namespace Main_Form
             }
         }
 
+
+        private void sectionFilteringBySemesterButton_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                SectionFilteringForm sectionFilteringForm = new SectionFilteringForm(RegistrationEntities);
+                sectionFilteringForm.Show();
+            }
+            
+            else
+            {
+               MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+        
         private void facultyCRUDButton_Click(object sender, EventArgs e)
         {
             if (CanOpenNewForm())
             {
                 FacultyCRUDForm facultyCRUDForm = new FacultyCRUDForm(RegistrationEntities);
                 facultyCRUDForm.Show();
+
             }
 
             else
@@ -87,6 +106,22 @@ namespace Main_Form
             }
         }
 
+
+        private void enrollmentFilteringByStudent_Click(object sender, EventArgs e)
+        {
+            if (CanOpenNewForm())
+            {
+                EnrollmentFilteringForm enrollmentFilteringForm = new EnrollmentFilteringForm(RegistrationEntities);
+                enrollmentFilteringForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("You can only have one form open at a time.");
+            }
+        }
+    }
+    
 		private void courseCRUDButton_Click(object sender, EventArgs e)
 		{
 			if (CanOpenNewForm())
@@ -108,6 +143,11 @@ namespace Main_Form
 				SectionCRUDForm sectionCRUDForm = new SectionCRUDForm(RegistrationEntities);
 				sectionCRUDForm.Show();
 			}
+      
+      else
+      {
+        MessageBox.Show("You can only have one form open at a time.");
+      }
 		}
 	}
 }

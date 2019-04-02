@@ -16,6 +16,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationEntityModel", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment CRUD Form", "Enrollment CRUD Form\Enrollment CRUD Form.csproj", "{60E17E57-6658-4060-B941-D788905DC6F1}"
 EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section Filtering Form", "Section Filtering Form\Section Filtering Form.csproj", "{C55CD495-F1D5-455E-A851-BABBAE8FB819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment Filtering Form", "Enrollment Filtering Form\Enrollment Filtering Form.csproj", "{C54D9CC0-0083-4F46-9418-1C636895CC1A}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faculty CRUD Form", "Faculty CRUD Form\Faculty CRUD Form.csproj", "{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Registration", "Registration\Registration.sqlproj", "{66F34F32-7EAE-4F7A-87DA-DAD45D06EF0A}"
@@ -50,6 +55,14 @@ Global
 		{60E17E57-6658-4060-B941-D788905DC6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E17E57-6658-4060-B941-D788905DC6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E17E57-6658-4060-B941-D788905DC6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55CD495-F1D5-455E-A851-BABBAE8FB819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55CD495-F1D5-455E-A851-BABBAE8FB819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55CD495-F1D5-455E-A851-BABBAE8FB819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55CD495-F1D5-455E-A851-BABBAE8FB819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54D9CC0-0083-4F46-9418-1C636895CC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54D9CC0-0083-4F46-9418-1C636895CC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54D9CC0-0083-4F46-9418-1C636895CC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54D9CC0-0083-4F46-9418-1C636895CC1A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FD668E8-CFE8-4512-884A-72AD8A37BFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -26,10 +26,5 @@ namespace Enrollment_CRUD_Form
             RegistrationEntities = RE;
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

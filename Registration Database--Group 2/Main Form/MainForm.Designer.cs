@@ -74,6 +74,7 @@
 			this.sectionFilteringBySemesterButton.TabIndex = 2;
 			this.sectionFilteringBySemesterButton.Text = "Section filtering by semester";
 			this.sectionFilteringBySemesterButton.UseVisualStyleBackColor = true;
+      this.sectionFilteringBySemesterButton.Click += new System.EventHandler(this.sectionFilteringBySemesterButton_Click);
 			// 
 			// studentCRUDButton
 			// 
@@ -97,6 +98,7 @@
 			this.enrollmentFilteringByStudent.TabIndex = 4;
 			this.enrollmentFilteringByStudent.Text = "Enrollment filtering by student";
 			this.enrollmentFilteringByStudent.UseVisualStyleBackColor = true;
+      this.enrollmentFilteringByStudent.Click += new System.EventHandler(this.enrollmentFilteringByStudent_Click);
 			// 
 			// majorCRUDButton
 			// 
@@ -177,7 +179,6 @@
 			this.Name = "mainForm";
 			this.Text = "Registration Database";
 			this.ResumeLayout(false);
-
         }
 
         #endregion
