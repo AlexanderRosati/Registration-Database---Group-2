@@ -11,9 +11,9 @@ using RegistrationEntityModel;
 
 namespace Enrollment_CRUD_Form
 {
-	public partial class enrollmentCRUDForm : Form
-	{
-		private RegistrationEntities RegistrationEntities;
+    public partial class enrollmentCRUDForm : Form
+    {
+        private RegistrationEntities RegistrationEntities;
 
         private void InitializeSectionsListBox()
         {
@@ -44,14 +44,10 @@ namespace Enrollment_CRUD_Form
 			RegistrationEntities = new RegistrationEntities();
 		}
 
-		public enrollmentCRUDForm(RegistrationEntities RE)
-		{
-			InitializeComponent();
-			RegistrationEntities = RE;
-
-			sectionComboBox.Items.Clear();
-			studentComboBox.Items.Clear();
-			gradeComboBox.Items.Clear();
+        public enrollmentCRUDForm(RegistrationEntities RE)
+        {
+            InitializeComponent();
+            RegistrationEntities = RE;
 
             ErrorLabel.Text = String.Empty;
 
