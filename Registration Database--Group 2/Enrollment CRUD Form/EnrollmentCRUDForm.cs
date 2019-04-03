@@ -15,6 +15,29 @@ namespace Enrollment_CRUD_Form
 	{
 		private RegistrationEntities RegistrationEntities;
 
+        private void InitializeSectionsListBox()
+        {
+            string listBoxEntry = null;
+            foreach (Section s in RegistrationEntities.Sections)
+            {
+                listBoxEntry = s.Id.ToString().PadRight(10) + s.Course.Name.PadRight(30)
+                               + s.Faculty.Name.PadRight(30) + s.Day.PadRight(30)
+                               + s.Time.PadRight(30) + s.Semester;
+                sectionsListBox.Items.Add(listBoxEntry);
+            }
+        }
+
+        private void InitializeStudentsListBox()
+        {
+            string listBoxEntry = null;
+            foreach (Student s in RegistrationEntities.Students)
+            {
+                listBoxEntry = s.Id.ToString().PadRight(10) + s.Name.PadRight(30)
+                               + s.Major.Name;
+                studentsListBox.Items.Add(listBoxEntry);
+            }
+        }
+
 		public enrollmentCRUDForm()
 		{
 			InitializeComponent();
@@ -29,6 +52,11 @@ namespace Enrollment_CRUD_Form
 			sectionComboBox.Items.Clear();
 			studentComboBox.Items.Clear();
 			gradeComboBox.Items.Clear();
+
+            ErrorLabel.Text = String.Empty;
+
+            InitializeSectionsListBox();
+            InitializeStudentsListBox();
 
 			foreach (Section sec in RegistrationEntities.Sections)
 			{
@@ -98,13 +126,13 @@ namespace Enrollment_CRUD_Form
 					int itemID = Convert.ToInt32(selected.Split(' ')[0]);
 					Enrollment enToUpdate = RegistrationEntities.Enrollments.Find(itemID);
 
-					IQueryable<Enrollment> result = RegistrationEntities.Enrollments.Where(en => en.SectionID == enToUpdate.SectionID &&
-						en.StudentID == enToUpdate.StudentID);
+					IQueryable<Enrollment> result = RegistrationEntities.Enrollments.Where(en => en.SectionID == (int)sectionComboBox.SelectedItem &&
+						en.StudentID == (int)studentComboBox.SelectedItem);
 
-					if (result.Count() == 0)
+					if (result.Count() == 0 || enToUpdate.StudentID == (int)studentComboBox.SelectedItem && enToUpdate.SectionID == (int)sectionComboBox.SelectedItem)
 					{
 						enToUpdate.SectionID = (int)sectionComboBox.SelectedItem;
-						enToUpdate.StudentID = (int) studentComboBox.SelectedItem;
+						enToUpdate.StudentID = (int)studentComboBox.SelectedItem;
 						enToUpdate.Grade = gradeComboBox.SelectedItem.ToString();
 
 						RegistrationEntities.SaveChanges();
@@ -113,8 +141,7 @@ namespace Enrollment_CRUD_Form
 					}
 					else
 					{
-						Student temps = RegistrationEntities.Students.Find(enToUpdate.StudentID);
-						ErrorLabel.Text = $"{temps.Name} is already enrolled in section {enToUpdate.SectionID}.";
+                        ErrorLabel.Text = "Error: This student is already enrolled in this course.";
 					}
 				}
 			} else

@@ -112,11 +112,17 @@ namespace Course_CRUD_Form
 
 				Course temp = RegEnt.Courses.Find(itemID);
 
-				/* TODO: Check if has students enrolled? */
+                if (temp.Sections.Count > 0)
+                {
+                    ErrorLabel.Text = "You cannot delete this record because other records are referencing it.";
+                }
 
-				RegEnt.Courses.Remove(temp);
-				RegEnt.SaveChanges();
-				UpdateCourseListBox();
+                else
+                {
+                    RegEnt.Courses.Remove(temp);
+                    RegEnt.SaveChanges();
+                    UpdateCourseListBox();
+                }
 
 			}
 			else

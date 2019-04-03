@@ -131,11 +131,17 @@ namespace Section_CRUD_Form
 
 				Section temp = RegEnt.Sections.Find(itemID);
 
-				/* TODO: Check if students are enrolled? */
+                if (temp.Enrollments.Count > 0)
+                {
+                    ErrorLabel.Text = "You cannot delete this record because other records are referencing it.";
+                }
 
-				RegEnt.Sections.Remove(temp);
-				RegEnt.SaveChanges();
-				UpdateSectionListBox();
+                else
+                {
+                    RegEnt.Sections.Remove(temp);
+                    RegEnt.SaveChanges();
+                    UpdateSectionListBox();
+                }
 			}
 			else
 			{
