@@ -169,6 +169,7 @@ namespace Main_Form
         {
             if (CanOpenNewForm())
             {
+                RegistrationEntities = new RegistrationEntities();
                 CourseFilteringByDepartmentForm CourseFilteringByDepartmentForm = new CourseFilteringByDepartmentForm(RegistrationEntities);
                 CourseFilteringByDepartmentForm.Show();
             }

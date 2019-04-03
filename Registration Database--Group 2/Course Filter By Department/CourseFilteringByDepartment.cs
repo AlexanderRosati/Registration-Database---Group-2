@@ -30,6 +30,7 @@ namespace Course_Filter_By_Department
 
         private void loadDepartmentComboBox()
         {
+
             List<string> departmentsAlreadyInComboBox = new List<string>();
             foreach (Course c in RegistrationEntities.Courses)
             {
