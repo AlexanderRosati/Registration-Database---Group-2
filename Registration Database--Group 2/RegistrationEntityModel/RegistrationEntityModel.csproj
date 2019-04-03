@@ -43,10 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,12 +54,6 @@
   <ItemGroup>
     <Compile Include="Course.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentFilteringByMajor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentFilteringByMajor.Designer.cs">
-      <DependentUpon>StudentFilteringByMajor.cs</DependentUpon>
     </Compile>
     <Compile Include="Enrollment.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
@@ -122,11 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="StudentFilteringByMajor.resx">
-      <DependentUpon>StudentFilteringByMajor.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
