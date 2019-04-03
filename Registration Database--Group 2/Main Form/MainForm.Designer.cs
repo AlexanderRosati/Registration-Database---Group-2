@@ -50,7 +50,6 @@
             this.courseCRUDButton.TabIndex = 0;
             this.courseCRUDButton.Text = "CRUD Operations for Course Table";
             this.courseCRUDButton.UseVisualStyleBackColor = true;
-            this.courseCRUDButton.Click += new System.EventHandler(this.courseCRUDButton_Click);
             // 
             // enrollmentCRUDButton
             // 
@@ -74,7 +73,6 @@
             this.sectionFilteringBySemesterButton.TabIndex = 2;
             this.sectionFilteringBySemesterButton.Text = "Section filtering by semester";
             this.sectionFilteringBySemesterButton.UseVisualStyleBackColor = true;
-            this.sectionFilteringBySemesterButton.Click += new System.EventHandler(this.sectionFilteringBySemesterButton_Click);
             // 
             // studentCRUDButton
             // 
@@ -98,7 +96,6 @@
             this.enrollmentFilteringByStudent.TabIndex = 4;
             this.enrollmentFilteringByStudent.Text = "Enrollment filtering by student";
             this.enrollmentFilteringByStudent.UseVisualStyleBackColor = true;
-            this.enrollmentFilteringByStudent.Click += new System.EventHandler(this.enrollmentFilteringByStudent_Click);
             // 
             // majorCRUDButton
             // 
@@ -122,7 +119,6 @@
             this.sectionCRUDButton.TabIndex = 6;
             this.sectionCRUDButton.Text = "CRUD Operations for Section Table";
             this.sectionCRUDButton.UseVisualStyleBackColor = true;
-            this.sectionCRUDButton.Click += new System.EventHandler(this.sectionCRUDButton_Click);
             // 
             // studentFilteringByMajorButton
             // 
@@ -134,7 +130,6 @@
             this.studentFilteringByMajorButton.TabIndex = 7;
             this.studentFilteringByMajorButton.Text = "Student filtering by major";
             this.studentFilteringByMajorButton.UseVisualStyleBackColor = true;
-            this.studentFilteringByMajorButton.Click += new System.EventHandler(this.studentFilteringByMajorButton_Click);
             // 
             // courseFilteringByDepartment
             // 
@@ -146,7 +141,6 @@
             this.courseFilteringByDepartment.TabIndex = 8;
             this.courseFilteringByDepartment.Text = "Course Filtering by Department";
             this.courseFilteringByDepartment.UseVisualStyleBackColor = true;
-            this.courseFilteringByDepartment.Click += new System.EventHandler(this.courseFilteringByDepartment_Click);
             // 
             // facultyCRUDButton
             // 
@@ -158,13 +152,12 @@
             this.facultyCRUDButton.TabIndex = 9;
             this.facultyCRUDButton.Text = "CRUD Operations for Faculty Table";
             this.facultyCRUDButton.UseVisualStyleBackColor = true;
-            this.facultyCRUDButton.Click += new System.EventHandler(this.facultyCRUDButton_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 261);
+            this.ClientSize = new System.Drawing.Size(654, 262);
             this.Controls.Add(this.facultyCRUDButton);
             this.Controls.Add(this.courseFilteringByDepartment);
             this.Controls.Add(this.studentFilteringByMajorButton);
