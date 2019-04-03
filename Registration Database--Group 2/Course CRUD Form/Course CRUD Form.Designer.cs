@@ -162,26 +162,23 @@
             // 
             this.CourseListBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CourseListBox.FormattingEnabled = true;
-            this.CourseListBox.HorizontalScrollbar = true;
             this.CourseListBox.ItemHeight = 14;
-            this.CourseListBox.Location = new System.Drawing.Point(12, 241);
-            this.CourseListBox.MultiColumn = true;
+            this.CourseListBox.Location = new System.Drawing.Point(30, 222);
             this.CourseListBox.Name = "CourseListBox";
-            this.CourseListBox.Size = new System.Drawing.Size(699, 186);
-            this.CourseListBox.TabIndex = 8;
-            this.CourseListBox.SelectedIndexChanged += new System.EventHandler(this.CourseListBox_SelectedIndexChanged);
+            this.CourseListBox.Size = new System.Drawing.Size(681, 200);
+            this.CourseListBox.TabIndex = 14;
             // 
             // CourseCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 450);
+            this.Controls.Add(this.CourseListBox);
             this.Controls.Add(this.ClearCourseInputButton);
             this.Controls.Add(this.UpdateCourseButton);
             this.Controls.Add(this.DeleteCourseButton);
             this.Controls.Add(this.AddCourseButton);
             this.Controls.Add(this.ErrorLabel);
-            this.Controls.Add(this.CourseListBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
