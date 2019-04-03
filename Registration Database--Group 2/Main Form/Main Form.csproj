@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="RegistrationEntityModel">
       <HintPath>..\RegistrationEntityModel\bin\Debug\RegistrationEntityModel.dll</HintPath>
@@ -88,17 +88,49 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Course CRUD Form\Course CRUD Form.csproj">
+      <Project>{ecd27720-e424-454c-a4be-42cb7b39e150}</Project>
+      <Name>Course CRUD Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Course Filter By Department\Course Filter By Department.csproj">
+      <Project>{4003e585-4323-4e14-956c-2d0fd8e4fa45}</Project>
+      <Name>Course Filter By Department</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Enrollment CRUD Form\Enrollment CRUD Form.csproj">
       <Project>{60e17e57-6658-4060-b941-d788905dc6f1}</Project>
       <Name>Enrollment CRUD Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enrollment Filtering Form\Enrollment Filtering Form.csproj">
+      <Project>{c54d9cc0-0083-4f46-9418-1c636895cc1a}</Project>
+      <Name>Enrollment Filtering Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Faculty CRUD Form\Faculty CRUD Form.csproj">
+      <Project>{5fd668e8-cfe8-4512-884a-72ad8a37bfd9}</Project>
+      <Name>Faculty CRUD Form</Name>
     </ProjectReference>
     <ProjectReference Include="..\Major CRUD Operations Form\Major CRUD Operations Form.csproj">
       <Project>{027ea279-09ed-493e-94e8-d0c1f2054540}</Project>
       <Name>Major CRUD Operations Form</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Registration\Registration.sqlproj">
+      <Project>{66f34f32-7eae-4f7a-87da-dad45d06ef0a}</Project>
+      <Name>Registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Section Filtering Form\Section Filtering Form.csproj">
+      <Project>{c55cd495-f1d5-455e-a851-babbae8fb819}</Project>
+      <Name>Section Filtering Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Section CRUD Form\Section CRUD Form.csproj">
+      <Project>{d575d179-0124-445f-bceb-5dbe6476003b}</Project>
+      <Name>Section CRUD Form</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Student CRUD Operations Form\Student CRUD Operations Form.csproj">
       <Project>{61e46dfd-5ebe-4fac-876b-ca474d348ab0}</Project>
       <Name>Student CRUD Operations Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Student Filtering By Major Form\Student Filtering By Major Form.csproj">
+      <Project>{5af2b285-ebc6-4728-bafe-5983aaafdfb5}</Project>
+      <Name>Student Filtering By Major Form</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

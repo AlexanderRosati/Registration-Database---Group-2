@@ -125,7 +125,6 @@
             this.updateEnrollmentButton.TabIndex = 12;
             this.updateEnrollmentButton.Text = "Update Enrollment";
             this.updateEnrollmentButton.UseVisualStyleBackColor = true;
-
             this.updateEnrollmentButton.Click += new System.EventHandler(this.updateEnrollmentButton_Click);
             // 
             // deleteEnrollmentButton
@@ -257,3 +256,4 @@
         private System.Windows.Forms.Label studentsListBoxLabel;
     }
 }
+
