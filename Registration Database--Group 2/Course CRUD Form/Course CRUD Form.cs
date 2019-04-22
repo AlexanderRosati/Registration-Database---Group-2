@@ -175,5 +175,9 @@ namespace Course_CRUD_Form
 
 		}
 
-	}
+        private void CourseCRUDForm_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -84,5 +84,10 @@ namespace Student_Filtering_By_Major_Form
             filterStudentsListBox.Items.Clear();
             fillListBoxWithEverythingInTable();
         }
+
+        private void studentFilteringByMajorForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
