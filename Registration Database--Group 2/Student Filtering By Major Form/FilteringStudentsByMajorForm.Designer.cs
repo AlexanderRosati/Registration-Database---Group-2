@@ -43,79 +43,71 @@
             // majorComboBox
             // 
             this.majorComboBox.FormattingEnabled = true;
-            this.majorComboBox.Location = new System.Drawing.Point(72, 52);
-            this.majorComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.majorComboBox.Location = new System.Drawing.Point(54, 42);
             this.majorComboBox.Name = "majorComboBox";
-            this.majorComboBox.Size = new System.Drawing.Size(160, 24);
+            this.majorComboBox.Size = new System.Drawing.Size(121, 21);
             this.majorComboBox.TabIndex = 0;
             // 
             // filterStudentsListBox
             // 
             this.filterStudentsListBox.Font = new System.Drawing.Font("Courier New", 8.25F);
             this.filterStudentsListBox.FormattingEnabled = true;
-            this.filterStudentsListBox.ItemHeight = 17;
-            this.filterStudentsListBox.Location = new System.Drawing.Point(241, 52);
-            this.filterStudentsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterStudentsListBox.ItemHeight = 14;
+            this.filterStudentsListBox.Location = new System.Drawing.Point(181, 42);
             this.filterStudentsListBox.Name = "filterStudentsListBox";
-            this.filterStudentsListBox.Size = new System.Drawing.Size(1607, 378);
+            this.filterStudentsListBox.Size = new System.Drawing.Size(1206, 312);
             this.filterStudentsListBox.TabIndex = 1;
             // 
             // majorLabel
             // 
             this.majorLabel.AutoSize = true;
-            this.majorLabel.Location = new System.Drawing.Point(16, 52);
-            this.majorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.majorLabel.Location = new System.Drawing.Point(12, 42);
             this.majorLabel.Name = "majorLabel";
-            this.majorLabel.Size = new System.Drawing.Size(47, 17);
+            this.majorLabel.Size = new System.Drawing.Size(36, 13);
             this.majorLabel.TabIndex = 2;
             this.majorLabel.Text = "Major:";
             // 
             // IDLabel
             // 
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Location = new System.Drawing.Point(237, 32);
-            this.IDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IDLabel.Location = new System.Drawing.Point(178, 26);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(25, 17);
+            this.IDLabel.Size = new System.Drawing.Size(21, 13);
             this.IDLabel.TabIndex = 3;
             this.IDLabel.Text = "ID:";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(344, 32);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameLabel.Location = new System.Drawing.Point(258, 26);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(49, 17);
+            this.nameLabel.Size = new System.Drawing.Size(38, 13);
             this.nameLabel.TabIndex = 4;
             this.nameLabel.Text = "Name:";
             // 
             // collegeLabel
             // 
             this.collegeLabel.AutoSize = true;
-            this.collegeLabel.Location = new System.Drawing.Point(1333, 32);
-            this.collegeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.collegeLabel.Location = new System.Drawing.Point(1000, 26);
             this.collegeLabel.Name = "collegeLabel";
-            this.collegeLabel.Size = new System.Drawing.Size(59, 17);
+            this.collegeLabel.Size = new System.Drawing.Size(45, 13);
             this.collegeLabel.TabIndex = 5;
             this.collegeLabel.Text = "College:";
             // 
             // majorListBoxLabel
             // 
             this.majorListBoxLabel.AutoSize = true;
-            this.majorListBoxLabel.Location = new System.Drawing.Point(837, 32);
-            this.majorListBoxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.majorListBoxLabel.Location = new System.Drawing.Point(628, 26);
             this.majorListBoxLabel.Name = "majorListBoxLabel";
-            this.majorListBoxLabel.Size = new System.Drawing.Size(47, 17);
+            this.majorListBoxLabel.Size = new System.Drawing.Size(36, 13);
             this.majorListBoxLabel.TabIndex = 6;
             this.majorListBoxLabel.Text = "Major:";
             // 
             // applyButton
             // 
-            this.applyButton.Location = new System.Drawing.Point(20, 97);
-            this.applyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applyButton.Location = new System.Drawing.Point(15, 79);
             this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(213, 28);
+            this.applyButton.Size = new System.Drawing.Size(160, 23);
             this.applyButton.TabIndex = 7;
             this.applyButton.Text = "Apply";
             this.applyButton.UseVisualStyleBackColor = true;
@@ -126,19 +118,17 @@
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(16, 177);
-            this.errorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.errorLabel.Location = new System.Drawing.Point(12, 144);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(91, 15);
+            this.errorLabel.Size = new System.Drawing.Size(70, 12);
             this.errorLabel.TabIndex = 9;
             this.errorLabel.Text = "Lorem Ipsum";
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(20, 134);
-            this.resetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resetButton.Location = new System.Drawing.Point(15, 109);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(213, 28);
+            this.resetButton.Size = new System.Drawing.Size(160, 23);
             this.resetButton.TabIndex = 10;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
@@ -146,9 +136,9 @@
             // 
             // studentFilteringByMajorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1865, 453);
+            this.ClientSize = new System.Drawing.Size(1399, 368);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.applyButton);
@@ -159,12 +149,10 @@
             this.Controls.Add(this.majorLabel);
             this.Controls.Add(this.filterStudentsListBox);
             this.Controls.Add(this.majorComboBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1299, 490);
+            this.MinimumSize = new System.Drawing.Size(979, 407);
             this.Name = "studentFilteringByMajorForm";
             this.Text = "Filtering Students By Major Form";
-            this.Load += new System.EventHandler(this.studentFilteringByMajorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

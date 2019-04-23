@@ -177,10 +177,5 @@ namespace Faculty_CRUD_Form
                 phoneNumberTextBox.Text = String.Empty;
             }
         }
-
-        private void FacultyCRUDForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
